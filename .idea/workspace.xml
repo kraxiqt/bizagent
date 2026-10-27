@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="feat(src/app): провайдеры, макеты и каркас роутера" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="repository" />
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "annlegkaya08"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/kraxiqt/bizagent.git",
+    "accountId": "cf84d18c-5330-4aef-a7d5-ff24f7b96cfc"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3LHJr1IWOOq6L4kWQ9Ld3SS1LQM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-73a66231627c-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.10968.92" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="" />
+      <created>1793105257164</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793105257164</updated>
+    </task>
+    <task id="LOCAL-00001" summary="feat(core): базовые файлы и конфиги">
+      <option name="closed" value="true" />
+      <created>1793105406089</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1793105406089</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(core): заглушка для бэкенда">
+      <option name="closed" value="true" />
+      <created>1793105422209</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1793105422209</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat(core): картинки и вспомогательные файлы">
+      <option name="closed" value="true" />
+      <created>1793105454635</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1793105454635</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat(core): .idea файлы">
+      <option name="closed" value="true" />
+      <created>1793105520836</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1793105520836</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat(src/feature): Zustand store, состояния, hooks и их ui">
+      <option name="closed" value="true" />
+      <created>1793105618897</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1793105618897</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat(src/entities): данные пользователя + ui">
+      <option name="closed" value="true" />
+      <created>1793105637639</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1793105637639</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(src/widgets): панель сверху">
+      <option name="closed" value="true" />
+      <created>1793105675983</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1793105675983</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat(src/shared): UI-kit, utils, config и базовый API-клиент">
+      <option name="closed" value="true" />
+      <created>1793105698673</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1793105698673</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat(src/pages): ui чата и страницы авторизации/регистрации">
+      <option name="closed" value="true" />
+      <created>1793105715206</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1793105715206</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat(src/app): провайдеры, макеты и каркас роутера">
+      <option name="closed" value="true" />
+      <created>1793105737593</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1793105737593</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="frontend" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat(core): базовые файлы и конфиги" />
+    <MESSAGE value="feat(core): заглушка для бэкенда" />
+    <MESSAGE value="feat(core): картинки и вспомогательные файлы" />
+    <MESSAGE value="feat(core): .idea файлы" />
+    <MESSAGE value="feat(src/feature): Zustand store, состояния, hooks и их ui" />
+    <MESSAGE value="feat(src/entities): данные пользователя + ui" />
+    <MESSAGE value="feat(src/widgets): панель сверху" />
+    <MESSAGE value="feat(src/shared): UI-kit, utils, config и базовый API-клиент" />
+    <MESSAGE value="feat(src/pages): ui чата и страницы авторизации/регистрации" />
+    <MESSAGE value="feat(src/app): провайдеры, макеты и каркас роутера" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(src/app): провайдеры, макеты и каркас роутера" />
+  </component>
+</project>
