@@ -4,7 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="feat(src/app): провайдеры, макеты и каркас роутера" />
+    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="feat(src/app): провайдеры, макеты и каркас роутера">
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/quizData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/autoprefixer" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/autoprefixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/baseline-browser-mapping" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/baseline-browser-mapping" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/cssesc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/cssesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/esbuild" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/esbuild" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/jiti" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/jiti" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/jsesc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/jsesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/json5" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/loose-envify" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/loose-envify" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/nanoid" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/nanoid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/resolve" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/resolve" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/rollup" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/rollup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/sucrase" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/sucrase" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/sucrase-node" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/sucrase-node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/tailwind" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/tailwind" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/tailwindcss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/tailwindcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/tsc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/tsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/tsserver" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/tsserver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/update-browserslist-db" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/update-browserslist-db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/vite" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/vite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/esbuild/bin/esbuild" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/esbuild/bin/esbuild" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rollup/dist/bin/rollup" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rollup/dist/bin/rollup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/typescript/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/typescript/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/typescript/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/typescript/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/typescript/ThirdPartyNoticeText.txt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/typescript/ThirdPartyNoticeText.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/typescript/lib/typesMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/typescript/lib/typesMap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/vite/dist/node/chunks/dep-BB45zftN.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/vite/dist/node/chunks/dep-BB45zftN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/router/PublicOnlyRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/router/PublicOnlyRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/auth/RegisterPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/auth/RegisterPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/QuizPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/QuizPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,23 +64,26 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "annlegkaya08"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;annlegkaya08&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kraxiqt/bizagent.git",
-    "accountId": "cf84d18c-5330-4aef-a7d5-ff24f7b96cfc"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kraxiqt/bizagent.git&quot;,
+    &quot;accountId&quot;: &quot;cf84d18c-5330-4aef-a7d5-ff24f7b96cfc&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4,
-  "fromUser": false
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3LHJr1IWOOq6L4kWQ9Ld3SS1LQM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,8 +94,12 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "frontend",
+    "node.js.detected.package.jshint": "true",
+    "node.js.selected.package.jshint": "",
     "nodejs_package_manager_path": "npm",
-    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true"
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "ts.external.directory.path": "/home/ann-legkaya/PycharmProjects/bizagent/frontend/node_modules/typescript/lib"
   }
 }]]></component>
   <component name="SharedIndexes">

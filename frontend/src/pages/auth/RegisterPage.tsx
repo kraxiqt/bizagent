@@ -13,8 +13,8 @@ export function RegisterPage() {
     } catch {
       return; //ошибка уже отображена через error в useRegister
     }
-    //сессия уже установлена в useRegister, далее проходим тест.
-    navigate(ROUTES.QUIZ, { replace: true });
+    //сессия уже установлена в useRegister, тест пройден до регистрации — идём в чат.
+    navigate(ROUTES.CHAT, { replace: true });
   };
 
   return (
