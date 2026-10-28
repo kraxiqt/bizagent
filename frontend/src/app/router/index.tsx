@@ -18,6 +18,15 @@ import { ROUTES } from './routes';
 export const router = createBrowserRouter([
   // первая страница сайта: вступление с кнопкой «Попробовать»
   { path: ROUTES.ROOT, element: <WelcomePage /> },
+  // тест до регистрации: доступен без входа (вошедшего отправляет в чат)
+  {
+    path: ROUTES.QUIZ,
+    element: (
+      <PublicOnlyRoute>
+        <QuizPage />
+      </PublicOnlyRoute>
+    ),
+  },
   {
     element: (
       <PublicOnlyRoute>
@@ -37,8 +46,6 @@ export const router = createBrowserRouter([
       </ProtectedRoute>
     ),
     children: [
-      // тест после регистрации: без шапки и боковой панели чата
-      { path: ROUTES.QUIZ, element: <QuizPage /> },
       {
         element: <ChatLayout />,
         children: [{ path: ROUTES.CHAT, element: <ChatPage /> }],

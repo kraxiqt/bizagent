@@ -30,7 +30,7 @@ export function WelcomePage() {
       <div className="mx-auto mt-10 flex w-full max-w-4xl justify-center">
         <button
           type="button"
-          onClick={() => navigate(ROUTES.REGISTER)}
+          onClick={() => navigate(ROUTES.QUIZ)}
           className="h-12 min-w-[220px] border-2 border-black bg-black px-8 text-base font-semibold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-black focus-visible:outline-black"
         >
           Попробовать

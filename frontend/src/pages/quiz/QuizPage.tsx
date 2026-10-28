@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '@/app/router/routes';
 import { QUIZ_QUESTIONS } from './quizData';
 
-// Чёрно-белый тест: 5 вопросов, в каждом выбирается один вариант.
+// Чёрно-белый тест до регистрации: в каждом вопросе выбирается один вариант.
 export function QuizPage() {
   const navigate = useNavigate();
   const total = QUIZ_QUESTIONS.length;
@@ -25,6 +25,12 @@ export function QuizPage() {
   const next = () => {
     if (selected === null) return;
     if (isLast) {
+      // ответы сохраняем до регистрации, чтобы их можно было отправить на бэк позже
+      try {
+        sessionStorage.setItem('quiz_answers', JSON.stringify(answers));
+      } catch {
+        // хранилище недоступно — не критично
+      }
       setFinished(true);
     } else {
       setStep((s) => s + 1);
@@ -40,14 +46,14 @@ export function QuizPage() {
       <main className="flex min-h-full flex-col items-center justify-center gap-6 bg-white px-6 py-10 text-center text-black">
         <h1 className="text-3xl font-bold uppercase tracking-wide">Готово</h1>
         <p className="max-w-md text-base text-neutral-700">
-          Спасибо за ответы. Теперь можно перейти к диалогу с ИИ-ассистентом.
+          Спасибо за ответы. Осталось создать аккаунт, и можно переходить к диалогу с ИИ-ассистентом.
         </p>
         <button
           type="button"
-          onClick={() => navigate(ROUTES.CHAT, { replace: true })}
+          onClick={() => navigate(ROUTES.REGISTER, { replace: true })}
           className="h-12 min-w-[220px] border-2 border-black bg-black px-8 text-base font-semibold uppercase tracking-wide text-white transition-colors hover:bg-white hover:text-black"
         >
-          Перейти в чат
+          Создать аккаунт
         </button>
       </main>
     );
