@@ -1,5 +1,6 @@
 from datetime import datetime, timezone
-
+from datetime import datetime, timezone
+from sqlalchemy import Column, DateTime, Float, Integer, JSON, String
 from sqlalchemy import DateTime, ForeignKey, String, Text
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -55,3 +56,18 @@ class MessageDB(Base):
     content: Mapped[str] = mapped_column(Text)
     status: Mapped[str] = mapped_column(String(16), default="sent")
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+class QuizResultDB(Base):
+    __tablename__ = "quiz_results"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(String, index=True, nullable=False)
+    days = Column(Integer, nullable=False)
+    hours_per_day = Column(Float, nullable=False)
+    answers = Column(JSON, nullable=False)
+    diagnosis = Column(JSON, nullable=False)
+    plan = Column(JSON, nullable=False)
+    created_at = Column(
+        DateTime(timezone=True),
+        default=lambda: datetime.now(timezone.utc),
+    )

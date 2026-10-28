@@ -3,7 +3,7 @@ import secrets
 import uuid
 from contextlib import asynccontextmanager
 from datetime import datetime, timedelta, timezone
-
+from quiz_router import router as quiz_router
 from dotenv import load_dotenv
 from fastapi import APIRouter, Depends, FastAPI, HTTPException, Request, Response
 from fastapi.exceptions import RequestValidationError
@@ -166,3 +166,4 @@ def me(user: UserDB = Depends(get_current_user)):
 
 
 app.include_router(auth)
+app.include_router(quiz_router, prefix="/api")
