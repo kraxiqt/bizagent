@@ -14,7 +14,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-# from chat import router as chat_router
+from chat import router as chat_router
 from database import Base, engine, get_db
 from db_models import RefreshTokenDB, UserDB
 from models import (
@@ -167,3 +167,4 @@ def me(user: UserDB = Depends(get_current_user)):
 
 app.include_router(auth)
 app.include_router(quiz_router, prefix="/api")
+app.include_router(chat_router)

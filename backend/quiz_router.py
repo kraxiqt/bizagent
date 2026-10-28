@@ -11,7 +11,7 @@ from sqlalchemy.orm import Session
 from database import get_db
 from db_models import QuizResultDB
 from llm import LLMUnavailable, generate_json
-from security import get_current_user  # ПРОВЕРЬТЕ: имя вашей зависимости, возвращающей пользователя из токена
+from security import get_current_user
 
 router = APIRouter()
 
@@ -44,7 +44,7 @@ class AnswerIn(BaseModel):
 
 class SubmitIn(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
-    days: Literal[7, 14]
+    days: Literal[7, 14, 30]
     hours_per_day: float = Field(alias="hoursPerDay", ge=0.25, le=8)
     answers: list[AnswerIn]
 
@@ -79,15 +79,7 @@ def diagnose(answers: list[AnswerIn]) -> dict:
 
 
 # ---------- промпт ----------
-SYSTEM = """Ты — наставник по предпринимательству и методист.
-Составляешь персональные планы обучения на основе результатов диагностики.
-Опирайся только на данные пользователя, не выдумывай факты о нём.
-Фокусируйся на слабых темах, сильные закрепляй кратко.
-Сложность заданий соответствует уровню пользователя.
-Пиши на русском языке.
-Отвечай строго валидным JSON по заданной схеме."""
-
-
+# системный промпт (JSON_SYSTEM_PROMPT) лежит в llm.py и подставляется в generate_json
 def build_prompt(data: SubmitIn, diagnosis: dict) -> str:
     qa = "\n".join(
         f"{i + 1}. {QUESTIONS_BY_ID[a.question_id]['text']}\n"
@@ -106,6 +98,7 @@ def build_prompt(data: SubmitIn, diagnosis: dict) -> str:
 Составь план обучения ровно на {data.days} дней (по одному объекту на каждый день).
 Сумма duration_min за день не должна превышать {int(data.hours_per_day * 60)} минут.
 Каждый день содержит практическое задание и проверяемый результат.
+Формулируй кратко: 2-4 пункта в tasks, одно предложение в result.
 
 Схема ответа:
 {{
@@ -118,11 +111,15 @@ def build_prompt(data: SubmitIn, diagnosis: dict) -> str:
 
 
 # ---------- генерация плана ----------
-def generate_plan(prompt: str) -> Plan:
+def generate_plan(prompt: str, days: int) -> Plan:
     for _ in range(2):  # одна повторная попытка при невалидном ответе
         try:
-            return Plan.model_validate(generate_json(SYSTEM, prompt))
-        except ValidationError:
+            plan = Plan.model_validate(generate_json(prompt))
+            if len(plan.days) != days:
+                raise ValueError("Неверное количество дней в плане")
+            return plan
+        except (ValidationError, ValueError):
+            # ValueError покрывает и json.JSONDecodeError (модель вернула не JSON)
             continue
         except LLMUnavailable as e:
             raise HTTPException(503, f"Модель недоступна: {e}")
@@ -160,7 +157,7 @@ def submit_quiz(
             raise HTTPException(429, "Подождите минуту перед повторной генерацией")
 
     diagnosis = diagnose(data.answers)
-    plan = generate_plan(build_prompt(data, diagnosis))
+    plan = generate_plan(build_prompt(data, diagnosis), data.days)
 
     db.add(
         QuizResultDB(
