@@ -11,6 +11,7 @@ from database import SessionLocal, get_db
 from db_models import ConversationDB, MessageDB, UserDB
 from llm import MAX_HISTORY_MESSAGES, LLMUnavailable, stream_llm
 from models import Conversation, Message, PaginatedResponse
+from quiz_router import quiz_context_for_chat
 from security import get_current_user
 
 logger = logging.getLogger(__name__)
@@ -18,6 +19,9 @@ logger = logging.getLogger(__name__)
 MAX_MESSAGE_CHARS = 4000  # защита лимита токенов на бесплатном тарифе
 
 router = APIRouter(prefix="/api/chat", tags=["chat"])
+
+
+
 
 
 class ChatRequest(BaseModel):
@@ -88,10 +92,11 @@ def stream_chat(
         ).all()
         history = [{"role": r.role, "content": r.content} for r in reversed(rows)]
     history.append({"role": "user", "content": data.content})
+    ctx = quiz_context_for_chat(db, str(user.id))
 
     # Первый кусок берём до ответа клиенту: так ошибки провайдера (лимит, ключ)
     # вернутся как обычный HTTP-ответ, и ничего не сохранится.
-    stream = stream_llm(history)
+    stream = stream_llm(history, extra_system=ctx)
     try:
         first = next(stream)
     except StopIteration:

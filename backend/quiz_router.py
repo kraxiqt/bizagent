@@ -15,24 +15,16 @@ from security import get_current_user
 
 router = APIRouter()
 
+# вопросы и темы лежат в одном месте: quiz.json (у каждого вопроса есть поле "topic")
 QUESTIONS = json.loads(
     (Path(__file__).parent / "quiz.json").read_text(encoding="utf-8")
 )["questions"]
 QUESTIONS_BY_ID = {q["id"]: q for q in QUESTIONS}
+ORDER = {q["id"]: i for i, q in enumerate(QUESTIONS)}
 
-# какую тему проверяет каждый вопрос
-TOPICS = {
-    "q1": "Этап пути",
-    "q2": "Выбор бизнес-идеи",
-    "q3": "Целевая аудитория",
-    "q4": "Проверка спроса",
-    "q5": "Привлечение клиентов",
-    "q6": "Продажи",
-    "q7": "Финансы",
-    "q8": "Оценка рисков",
-    "q9": "Планирование и дисциплина",
-    "q10": "Рост бизнеса",
-}
+# q1 («на каком ты этапе») не тема для изучения, а стартовая точка,
+# поэтому в слабые/сильные темы он не попадает и идёт в промпт отдельной строкой
+STAGE_ID = "q1"
 
 
 # ---------- схемы ----------
@@ -63,31 +55,53 @@ class Plan(BaseModel):
     tips: list[str]
 
 
-# ---------- диагностика ----------
+# ---------- проверка и диагностика ----------
+def validate_answers(answers: list[AnswerIn]) -> list[AnswerIn]:
+    """Ровно по одному ответу на каждый вопрос; возвращает ответы в порядке вопросов."""
+    ids = [a.question_id for a in answers]
+    if len(ids) != len(set(ids)) or set(ids) != set(QUESTIONS_BY_ID):
+        raise HTTPException(400, "Ответы не совпадают с вопросами теста")
+    return sorted(answers, key=lambda a: ORDER[a.question_id])
+
+
 def diagnose(answers: list[AnswerIn]) -> dict:
+    by_q = {a.question_id: a.option_index for a in answers}  # answers уже отсортированы
+
     max_score = len(QUESTIONS) * 3
-    total = sum(a.option_index for a in answers)
+    total = sum(by_q.values())
     ratio = total / max_score
     level = "новичок" if ratio < 0.35 else "средний" if ratio < 0.7 else "продвинутый"
+
+    def topics(match) -> list[str]:
+        return [
+            QUESTIONS_BY_ID[qid]["topic"]
+            for qid, idx in by_q.items()
+            if qid != STAGE_ID and match(idx)
+        ]
+
     return {
         "totalScore": total,
         "maxScore": max_score,
         "level": level,
-        "weakTopics": [TOPICS[a.question_id] for a in answers if a.option_index <= 1],
-        "strongTopics": [TOPICS[a.question_id] for a in answers if a.option_index == 3],
+        "stage": QUESTIONS_BY_ID[STAGE_ID]["options"][by_q[STAGE_ID]],
+        "weakTopics": topics(lambda i: i <= 1),
+        "strongTopics": topics(lambda i: i == 3),
     }
 
 
 # ---------- промпт ----------
 # системный промпт (JSON_SYSTEM_PROMPT) лежит в llm.py и подставляется в generate_json
-def build_prompt(data: SubmitIn, diagnosis: dict) -> str:
-    qa = "\n".join(
-        f"{i + 1}. {QUESTIONS_BY_ID[a.question_id]['text']}\n"
-        f"   Ответ: {QUESTIONS_BY_ID[a.question_id]['options'][a.option_index]}"
-        for i, a in enumerate(data.answers)
-    )
+def build_prompt(data: SubmitIn, answers: list[AnswerIn], diagnosis: dict) -> str:
+    qa_lines = []
+    for i, a in enumerate(answers, 1):
+        q = QUESTIONS_BY_ID[a.question_id]
+        qa_lines.append(f"{i}. {q['text']}\n   Ответ: {q['options'][a.option_index]}")
+    qa = "\n".join(qa_lines)
+
+    limit = int(data.hours_per_day * 60)
     return f"""Результаты диагностики:
 Уровень: {diagnosis['level']} ({diagnosis['totalScore']} из {diagnosis['maxScore']})
+Текущий этап: {diagnosis['stage']}
 Слабые темы: {', '.join(diagnosis['weakTopics']) or 'нет'}
 Сильные темы: {', '.join(diagnosis['strongTopics']) or 'нет'}
 Времени в день: {data.hours_per_day} ч.
@@ -95,10 +109,13 @@ def build_prompt(data: SubmitIn, diagnosis: dict) -> str:
 Ответы пользователя:
 {qa}
 
-Составь план обучения ровно на {data.days} дней (по одному объекту на каждый день).
-Сумма duration_min за день не должна превышать {int(data.hours_per_day * 60)} минут.
-Каждый день содержит практическое задание и проверяемый результат.
-Формулируй кратко: 2-4 пункта в tasks, одно предложение в result.
+Составь план обучения ровно на {data.days} дней (по одному объекту на каждый день, day от 1 до {data.days}).
+Правила:
+- Начинай с текущего этапа пользователя, не давай то, что он уже прошёл.
+- Слабые темы ставь в начало плана и возвращайся к ним повторно, сильные темы только закрепляй.
+- Сумма duration_min за день не должна превышать {limit} минут.
+- Каждый день содержит практическое задание и проверяемый результат.
+- Формулируй кратко: 2-4 пункта в tasks, одно предложение в result.
 
 Схема ответа:
 {{
@@ -117,6 +134,8 @@ def generate_plan(prompt: str, days: int) -> Plan:
             plan = Plan.model_validate(generate_json(prompt))
             if len(plan.days) != days:
                 raise ValueError("Неверное количество дней в плане")
+            for i, d in enumerate(plan.days, 1):  # на случай, если модель сбилась с нумерацией
+                d.day = i
             return plan
         except (ValidationError, ValueError):
             # ValueError покрывает и json.JSONDecodeError (модель вернула не JSON)
@@ -124,6 +143,37 @@ def generate_plan(prompt: str, days: int) -> Plan:
         except LLMUnavailable as e:
             raise HTTPException(503, f"Модель недоступна: {e}")
     raise HTTPException(502, "Модель вернула некорректный план, попробуйте ещё раз")
+
+
+# ---------- работа с БД ----------
+def latest_row(db: Session, user_id: str) -> QuizResultDB | None:
+    return db.scalar(
+        select(QuizResultDB)
+        .where(QuizResultDB.user_id == user_id)
+        .order_by(QuizResultDB.created_at.desc())
+        .limit(1)
+    )
+
+
+def quiz_context_for_chat(db: Session, user_id: str) -> str | None:
+    'Текст для системного промпта чата: что известно о пользователе по тесту.'
+
+    row = latest_row(db, user_id)
+    if not row:
+        return None
+    d = row.diagnosis or {}
+    days = "\n".join(f"День {p['day']}: {p['topic']}" for p in (row.plan or {}).get("days", []))
+    return (
+        "Профиль пользователя по результатам теста:\n"
+        f"Уровень: {d.get('level', '?')}\n"
+        f"Текущий этап: {d.get('stage', '?')}\n"
+        f"Слабые темы: {', '.join(d.get('weakTopics', [])) or 'нет'}\n"
+        f"Сильные темы: {', '.join(d.get('strongTopics', [])) or 'нет'}\n"
+        f"Времени в день: {row.hours_per_day} ч.\n"
+        f"План обучения на {row.days} дней (темы по дням):\n{days}"
+        "\n\nИспользуй эти данные как контекст. Отвечай на конкретный вопрос пользователя, "
+        "не пересказывай весь план, если об этом не просили."
+    )
 
 
 # ---------- эндпоинты ----------
@@ -138,17 +188,10 @@ def submit_quiz(
     user=Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    ids = [a.question_id for a in data.answers]
-    if len(ids) != len(QUESTIONS) or set(ids) != set(QUESTIONS_BY_ID):
-        raise HTTPException(400, "Ответы не совпадают с вопросами теста")
+    answers = validate_answers(data.answers)
 
     # защита от спама: не чаще одной генерации в минуту
-    last = db.scalar(
-        select(QuizResultDB)
-        .where(QuizResultDB.user_id == str(user.id))
-        .order_by(QuizResultDB.created_at.desc())
-        .limit(1)
-    )
+    last = latest_row(db, str(user.id))
     if last:
         created = last.created_at
         if created.tzinfo is None:
@@ -156,15 +199,16 @@ def submit_quiz(
         if datetime.now(timezone.utc) - created < timedelta(minutes=1):
             raise HTTPException(429, "Подождите минуту перед повторной генерацией")
 
-    diagnosis = diagnose(data.answers)
-    plan = generate_plan(build_prompt(data, diagnosis), data.days)
+    diagnosis = diagnose(answers)
+    plan = generate_plan(build_prompt(data, answers, diagnosis), data.days)
 
+    # в БД попадает только успешный результат: ответы + диагностика + готовый план
     db.add(
         QuizResultDB(
             user_id=str(user.id),
             days=data.days,
             hours_per_day=data.hours_per_day,
-            answers=[a.model_dump() for a in data.answers],
+            answers=[a.model_dump() for a in answers],
             diagnosis=diagnosis,
             plan=plan.model_dump(),
         )
@@ -179,12 +223,12 @@ def latest_result(
     user=Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    row = db.scalar(
-        select(QuizResultDB)
-        .where(QuizResultDB.user_id == str(user.id))
-        .order_by(QuizResultDB.created_at.desc())
-        .limit(1)
-    )
+    row = latest_row(db, str(user.id))
     if not row:
         return None
-    return {"diagnosis": row.diagnosis, "plan": row.plan}
+    return {
+        "diagnosis": row.diagnosis,
+        "plan": row.plan,
+        "days": row.days,
+        "hoursPerDay": row.hours_per_day,
+    }
