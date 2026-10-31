@@ -1,11 +1,13 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ROUTES } from '@/app/router/routes';
-import { quizApi, type QuizResult } from '@/features/quiz';
-import { getErrorMessage } from '@/shared/api/errorHandler';
-import { QUIZ_QUESTIONS } from './quizData';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "@/app/router/routes";
+import { quizApi, type QuizResult } from "@/features/quiz";
+import { getErrorMessage } from "@/shared/api/errorHandler";
+import { QUIZ_QUESTIONS } from "./quizData";
+import { PlanView } from "./PlanView";
 
-const DAYS_OPTIONS = [7, 14] as const;
+const DAYS_OPTIONS = [7, 14, 30] as const;
+
 const HOURS_OPTIONS = [0.5, 1, 2, 3];
 
 export function QuizPage() {
@@ -14,8 +16,10 @@ export function QuizPage() {
 
   // 0..total-1 — вопросы, total — настройки плана
   const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState<(number | null)[]>(() => Array(total).fill(null));
-  const [days, setDays] = useState<7 | 14>(7);
+  const [answers, setAnswers] = useState<(number | null)[]>(() =>
+    Array(total).fill(null),
+  );
+  const [days, setDays] = useState<7 | 14 | 30>(7);
   const [hoursPerDay, setHoursPerDay] = useState(1);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string>();
@@ -43,7 +47,7 @@ export function QuizPage() {
       });
       setResult(data);
     } catch (err) {
-      setError(getErrorMessage(err, 'Не удалось создать план'));
+      setError(getErrorMessage(err, "Не удалось создать план"));
     } finally {
       setSubmitting(false);
     }
@@ -51,33 +55,16 @@ export function QuizPage() {
 
   const optionClass = (active: boolean) =>
     `h-12 min-w-[90px] border-2 border-black px-4 text-sm font-semibold uppercase tracking-wide transition-colors ${
-      active ? 'bg-black text-white' : 'bg-white text-black hover:bg-neutral-100'
+      active
+        ? "bg-black text-white"
+        : "bg-white text-black hover:bg-neutral-100"
     }`;
 
   if (result) {
     return (
       <main className="flex min-h-full flex-col bg-white px-6 py-10 text-black sm:px-10">
         <div className="mx-auto w-full max-w-2xl">
-          <h1 className="mb-4 text-3xl font-bold uppercase tracking-wide">Ваш план</h1>
-          <p className="mb-2 text-base text-neutral-800">
-            Уровень: {result.diagnosis.level} ({result.diagnosis.totalScore} из {result.diagnosis.maxScore})
-          </p>
-          <p className="mb-8 text-base leading-relaxed text-neutral-800">{result.plan.summary}</p>
-          <ol className="flex flex-col gap-4">
-            {result.plan.days.map((d) => (
-              <li key={d.day} className="border-2 border-black p-4">
-                <p className="font-semibold">
-                  День {d.day}: {d.topic} ({d.duration_min} мин)
-                </p>
-                <ul className="mt-2 list-disc pl-5 text-sm">
-                  {d.tasks.map((t) => (
-                    <li key={t}>{t}</li>
-                  ))}
-                </ul>
-                <p className="mt-2 text-sm text-neutral-700">Результат: {d.result}</p>
-              </li>
-            ))}
-          </ol>
+          <PlanView result={result} />
           <button
             type="button"
             onClick={() => navigate(ROUTES.CHAT, { replace: true })}
@@ -94,19 +81,31 @@ export function QuizPage() {
     <main className="flex min-h-full flex-col bg-white px-6 py-10 text-black sm:px-10">
       <div className="mx-auto w-full max-w-2xl">
         <div className="mb-2 flex items-center justify-between text-sm font-medium text-neutral-700">
-          <span>{isSettings ? 'Настройки плана' : `Вопрос ${step + 1} из ${total}`}</span>
+          <span>
+            {isSettings ? "Настройки плана" : `Вопрос ${step + 1} из ${total}`}
+          </span>
           <span>{Math.round(progress)}%</span>
         </div>
         <div className="mb-10 h-2 w-full border border-black bg-white">
-          <div className="h-full bg-black transition-all" style={{ width: `${progress}%` }} />
+          <div
+            className="h-full bg-black transition-all"
+            style={{ width: `${progress}%` }}
+          />
         </div>
 
         {isSettings ? (
           <>
-            <h1 className="mb-6 text-2xl font-semibold sm:text-3xl">Сколько дней и часов в день?</h1>
+            <h1 className="mb-6 text-2xl font-semibold sm:text-3xl">
+              Сколько дней и часов в день?
+            </h1>
             <div className="mb-6 flex flex-wrap gap-3">
               {DAYS_OPTIONS.map((d) => (
-                <button key={d} type="button" className={optionClass(days === d)} onClick={() => setDays(d)}>
+                <button
+                  key={d}
+                  type="button"
+                  className={optionClass(days === d)}
+                  onClick={() => setDays(d)}
+                >
                   {d} дней
                 </button>
               ))}
@@ -124,15 +123,24 @@ export function QuizPage() {
               ))}
             </div>
             {error && (
-              <p role="alert" className="mt-6 border-2 border-black px-3 py-2 text-sm">
+              <p
+                role="alert"
+                className="mt-6 border-2 border-black px-3 py-2 text-sm"
+              >
                 {error}
               </p>
             )}
           </>
         ) : (
           <>
-            <h1 className="mb-8 text-2xl font-semibold leading-snug sm:text-3xl">{question.text}</h1>
-            <div role="radiogroup" aria-label="Варианты ответа" className="flex flex-col gap-3">
+            <h1 className="mb-8 text-2xl font-semibold leading-snug sm:text-3xl">
+              {question.text}
+            </h1>
+            <div
+              role="radiogroup"
+              aria-label="Варианты ответа"
+              className="flex flex-col gap-3"
+            >
               {question.options.map((option, index) => {
                 const isChecked = selected === index;
                 return (
@@ -143,7 +151,9 @@ export function QuizPage() {
                     aria-checked={isChecked}
                     onClick={() => selectOption(index)}
                     className={`flex items-center gap-4 border-2 border-black px-5 py-4 text-left text-base transition-colors ${
-                      isChecked ? 'bg-black text-white' : 'bg-white text-black hover:bg-neutral-100'
+                      isChecked
+                        ? "bg-black text-white"
+                        : "bg-white text-black hover:bg-neutral-100"
                     }`}
                   >
                     {option}
@@ -170,7 +180,7 @@ export function QuizPage() {
               disabled={submitting}
               className="h-11 min-w-[120px] border-2 border-black bg-black px-6 text-sm font-semibold uppercase tracking-wide text-white disabled:opacity-40"
             >
-              {submitting ? 'Создаём план...' : 'Создать план'}
+              {submitting ? "Создаём план..." : "Создать план"}
             </button>
           ) : (
             <button

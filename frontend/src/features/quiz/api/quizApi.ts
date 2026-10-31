@@ -1,4 +1,4 @@
-import { apiClient } from '@/shared/api/baseClient';
+import { apiClient } from "@/shared/api/baseClient";
 
 export interface QuizQuestion {
   id: string;
@@ -7,7 +7,7 @@ export interface QuizQuestion {
 }
 
 export interface QuizSubmitDto {
-  days: 7 | 14;
+  days: 7 | 14 | 30;
   hoursPerDay: number;
   answers: { questionId: string; optionIndex: number }[];
 }
@@ -41,8 +41,8 @@ export interface QuizResult {
 
 export const quizApi = {
   //вопросы теста с бэкенда (GET /api/quiz)
-  questions: () => apiClient.get<QuizQuestion[]>('/quiz'),
+  questions: () => apiClient.get<QuizQuestion[]>("/quiz"),
   submit: (dto: QuizSubmitDto) =>
-    apiClient.post<QuizResult>('/quiz/submit', dto, { timeoutMs: 120_000 }),
-  latest: () => apiClient.get<QuizResult | null>('/quiz/latest'),
+    apiClient.post<QuizResult>("/quiz/submit", dto, { timeoutMs: 120_000 }),
+  latest: () => apiClient.get<QuizResult | null>("/quiz/latest"),
 };
