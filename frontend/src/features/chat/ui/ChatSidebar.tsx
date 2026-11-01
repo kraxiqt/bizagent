@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { cn } from '@/shared/lib/cn';
 import { Button, IconButton } from '@/shared/ui';
 
@@ -35,6 +36,8 @@ interface ChatSidebarProps {
   onSelect: (id: string) => void;
   onDelete: (id: string) => void;
   onNew: () => void;
+  // ширина на десктопе, px (меняется ручкой в ChatLayout)
+  width?: number;
   className?: string;
 }
 
@@ -46,12 +49,14 @@ export function ChatSidebar({
   onSelect,
   onDelete,
   onNew,
+  width,
   className,
 }: ChatSidebarProps) {
   return (
     <aside
+      style={width ? ({ '--sidebar-w': `${width}px` } as CSSProperties) : undefined}
       className={cn(
-        'w-64 shrink-0 flex-col border-r border-ink-200 bg-white dark:border-ink-800 dark:bg-ink-950',
+        'w-64 shrink-0 flex-col md:w-[var(--sidebar-w,16rem)] border-r-2 border-black bg-white font-display dark:border-ink-700 dark:bg-ink-950',
         className,
       )}
     >
@@ -84,8 +89,8 @@ export function ChatSidebar({
                   className={cn(
                     'group flex items-center rounded-lg transition-colors',
                     isActive
-                      ? 'bg-ink-200/70 dark:bg-ink-800'
-                      : 'hover:bg-ink-200/50 dark:hover:bg-ink-900',
+                      ? 'bg-brand-600 text-white'
+                      : 'hover:bg-brand-50 dark:hover:bg-ink-900',
                   )}
                 >
                   <button
@@ -94,7 +99,7 @@ export function ChatSidebar({
                     disabled={disabled && !isActive}
                     aria-current={isActive ? 'page' : undefined}
                     title={item.title}
-                    className="min-w-0 flex-1 truncate px-3 py-2 text-left text-sm disabled:cursor-not-allowed disabled:opacity-50"
+                    className="min-w-0 flex-1 truncate px-3 py-2 text-left text-base disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {item.title}
                   </button>
@@ -104,7 +109,7 @@ export function ChatSidebar({
                     icon={TrashIcon}
                     disabled={disabled}
                     onClick={() => onDelete(item.id)}
-                    className="mr-1 opacity-0 focus-visible:opacity-100 group-hover:opacity-100"
+                    className={cn('mr-1 opacity-0 focus-visible:opacity-100 group-hover:opacity-100', isActive && 'text-white hover:bg-brand-700')}
                   />
                 </li>
               );

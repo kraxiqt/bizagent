@@ -26,9 +26,9 @@ export function RegisterForm({ onSubmit, loading = false, error }: RegisterFormP
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
       {error && (
-        <p role="alert" className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700 dark:bg-red-950/40 dark:text-red-400">
+        <p role="alert" className="bg-white px-3 py-2 text-sm font-medium text-red-700">
           {error}
         </p>
       )}
@@ -59,12 +59,14 @@ export function RegisterForm({ onSubmit, loading = false, error }: RegisterFormP
         error={mismatch}
         required
       />
-      <Button type="submit" fullWidth loading={loading}>
-        Создать аккаунт
-      </Button>
-      <p className="text-center text-sm text-ink-600 dark:text-ink-400">
+      <div className="flex justify-center">
+        <Button type="submit" variant="inverted" size="lg" loading={loading} className="px-4 text-2xl">
+          Создать аккаунт
+        </Button>
+      </div>
+      <p className="text-center font-display text-base font-medium text-white/70">
         Уже есть аккаунт?{' '}
-        <Link to={ROUTES.LOGIN} className="font-medium text-brand-700 underline dark:text-brand-400">
+        <Link to={ROUTES.LOGIN} className="font-bold text-white hover:underline">
           Войти
         </Link>
       </p>

@@ -1,7 +1,18 @@
 import { useMemo, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useAuthStore } from '@/features/auth';
-import { ChatHeader, ChatSidebar, useChat, useChatHistorySync } from '@/features/chat';
+import {
+  ChatHeader,
+  ChatSidebar,
+  PANEL_LIMITS,
+  panelMax,
+  useChat,
+  useChatHistorySync,
+  usePanelsStore,
+} from '@/features/chat';
+import { StreakBadge, useStreakSync } from '@/features/streak';
+import { useViewportWidth } from '@/shared/lib/useViewportWidth';
+import { ResizeHandle } from '@/shared/ui';
 
 const isDesktop = () => window.matchMedia('(min-width: 768px)').matches;
 
@@ -20,6 +31,17 @@ export function ChatLayout() {
   // история хранится на бэкенде: загружаем её для текущего пользователя
   const userId = useAuthStore((s) => s.user?.id ?? null);
   useChatHistorySync(userId);
+  // серия «огоньков» хранится отдельно для каждого пользователя
+  useStreakSync(userId);
+
+  // ширина боковых панелей: история слева меняется ручкой, значение запоминается
+  const viewport = useViewportWidth();
+  const historyWidth = usePanelsStore((s) => s.historyWidth);
+  const planWidth = usePanelsStore((s) => s.planWidth);
+  const setWidth = usePanelsStore((s) => s.setWidth);
+  const resetWidth = usePanelsStore((s) => s.resetWidth);
+  const historyMax = panelMax('history', viewport, planWidth);
+  const historyShown = Math.min(historyWidth, historyMax);
 
   // на десктопе панель открыта по умолчанию, на телефоне — закрыта
   const [sidebarOpen, setSidebarOpen] = useState(isDesktop);
@@ -45,6 +67,7 @@ export function ChatLayout() {
         disabled={isGenerating}
         onNewConversation={startNewConversation}
         onToggleSidebar={() => setSidebarOpen((v) => !v)}
+        extra={<StreakBadge />}
       />
 
       <div className="relative flex min-h-0 flex-1">
@@ -59,6 +82,7 @@ export function ChatLayout() {
           className={sidebarOpen ? 'fixed inset-y-0 left-0 z-30 flex md:static md:z-auto' : 'hidden'}
           items={items}
           activeId={conversation.id}
+          width={historyShown}
           disabled={isGenerating}
           onSelect={(id) => {
             if (id !== conversation.id) openConversation(id);
@@ -71,7 +95,20 @@ export function ChatLayout() {
           }}
         />
 
-        <main className="mx-auto flex min-h-0 w-full max-w-3xl flex-1 flex-col px-4">
+        {sidebarOpen && (
+          <ResizeHandle
+            edge="right"
+            label="Ширина истории чатов"
+            width={historyShown}
+            min={PANEL_LIMITS.history.min}
+            max={historyMax}
+            onChange={(value) => setWidth('history', value)}
+            onReset={() => resetWidth('history')}
+            className="hidden md:block"
+          />
+        )}
+
+        <main className="flex min-h-0 min-w-0 flex-1 flex-col">
           <Outlet />
         </main>
       </div>

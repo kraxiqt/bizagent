@@ -5,14 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="fix(src): восстановление порядка страниц и api к бэку">
-      <change afterPath="$PROJECT_DIR$/frontend/src/features/quiz/api/quizApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/features/quiz/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/bizagent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bizagent.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.development" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.local" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.production" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/mock-auth-server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/mock-auth-server.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/@tanstack_react-query.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/@tanstack_react-query.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-markdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-markdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-markdown.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-markdown.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-router-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-router-dom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/remark-gfm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/remark-gfm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/remark-gfm.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/remark-gfm.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/tailwind-merge.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/tailwind-merge.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/zustand.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/zustand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/zustand.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/zustand.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/layouts/AuthLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layouts/AuthLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/layouts/ChatLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layouts/ChatLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/entities/user/ui/UserAvatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/entities/user/ui/UserAvatar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/auth/ui/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/auth/ui/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/auth/ui/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/auth/ui/RegisterForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatSidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/EmptyState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/EmptyState.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/MessageBubble.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/MessageBubble.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/auth/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/auth/LoginPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/auth/RegisterPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/auth/RegisterPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/chat/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/chat/ChatPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/chat/PlanPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/chat/PlanPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/PlanView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/PlanView.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/QuizPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/QuizPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/shared/config/env.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/config/env.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/shared/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/IconButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/IconButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Textarea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +92,65 @@
     &quot;accountId&quot;: &quot;cf84d18c-5330-4aef-a7d5-ff24f7b96cfc&quot;
   }
 }</component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.283346261889185E-6" />
+      <entry key="MS500" value="0.08989731135247979" />
+      <entry key="S2" value="0.899487387731989" />
+      <entry key="S5" value="1.4499593074131447" />
+      <entry key="S10" value="1.7024188452357043" />
+      <entry key="S30" value="2.0366989904999704" />
+      <entry key="S60" value="3.0173187899440177" />
+      <entry key="M2" value="5.389236196886711" />
+      <entry key="M5" value="10.844147396235469" />
+      <entry key="M10" value="15.447658792329683" />
+      <entry key="M15" value="17.707390000224006" />
+      <entry key="M30" value="20.505761325393443" />
+      <entry key="H1" value="22.154253602379097" />
+      <entry key="H2" value="23.050828402341992" />
+      <entry key="H4" value="23.518621424890206" />
+      <entry key="D1" value="23.91880763950014" />
+      <entry key="W1" value="23.988377263301015" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000007981227" />
+      <entry key="S10" value="1.0000417739926213" />
+      <entry key="S30" value="1.0786467399754476" />
+      <entry key="S60" value="1.5661443496279903" />
+      <entry key="M2" value="2.7234521317068836" />
+      <entry key="M5" value="5.113720975701146" />
+      <entry key="M10" value="6.922227026579189" />
+      <entry key="M15" value="7.764439455421795" />
+      <entry key="M30" value="8.776121109580862" />
+      <entry key="H1" value="9.358423005754258" />
+      <entry key="H2" value="9.671368207044454" />
+      <entry key="H4" value="9.83366594447496" />
+      <entry key="D1" value="9.97199233930629" />
+      <entry key="W1" value="9.995991851746046" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="7.872599954559713E-6" />
+      <entry key="MS500" value="0.18113248269240861" />
+      <entry key="S2" value="1.4478939016997103" />
+      <entry key="S5" value="2.236131554266836" />
+      <entry key="S10" value="2.5890729306322364" />
+      <entry key="S30" value="3.0731473984439233" />
+      <entry key="S60" value="4.552668487462773" />
+      <entry key="M2" value="8.085406463877824" />
+      <entry key="M5" value="15.936777276732798" />
+      <entry key="M10" value="22.35540172105656" />
+      <entry key="M15" value="25.460939016405007" />
+      <entry key="M30" value="29.27569191462575" />
+      <entry key="H1" value="31.509366001012744" />
+      <entry key="H2" value="32.720483320883915" />
+      <entry key="H4" value="33.35141567369223" />
+      <entry key="D1" value="33.89065255678111" />
+      <entry key="W1" value="33.98434800171319" />
+    </decayedShown>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4,
   &quot;fromUser&quot;: false
@@ -57,21 +163,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "frontend",
-    "last_opened_file_path": "/home/ann-legkaya/PycharmProjects/bizagent/frontend/src/pages/quiz",
-    "node.js.detected.package.jshint": "true",
-    "node.js.selected.package.jshint": "",
-    "nodejs_package_manager_path": "npm",
-    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
-    "ts.external.directory.path": "/home/ann-legkaya/PycharmProjects/bizagent/frontend/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ann-legkaya/PycharmProjects/bizagent/frontend/src/pages/quiz&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/ann-legkaya/PycharmProjects/bizagent/frontend/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/pages/quiz" />
@@ -80,7 +186,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-73a66231627c-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.10968.92" />
+        <option value="bundled-python-sdk-ebb3072d7bdf-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.11879.98" />
       </set>
     </attachedChunks>
   </component>

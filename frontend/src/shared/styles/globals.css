@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Цифры рисуем шрифтом Jaini: отдельное семейство только с диапазоном 0–9,
+ * остальные символы берутся из Inter / Iosevka Charon (см. fontFamily в tailwind.config.js).
+ * Файл шрифта приходит из пакета @fontsource/jaini (npm install).
+ */
+@font-face {
+  font-family: 'Jaini Digits';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../../../node_modules/@fontsource/jaini/files/jaini-latin-400-normal.woff2') format('woff2');
+  unicode-range: U+0030-0039;
+}
+
 @layer base {
   html,
   body,
@@ -10,7 +24,7 @@
   }
 
   body {
-    @apply bg-ink-50 font-sans text-ink-900 antialiased;
+    @apply bg-white font-sans text-ink-900 antialiased;
   }
 
   .dark body {
@@ -32,5 +46,27 @@
       animation-duration: 0.01ms !important;
       transition-duration: 0.01ms !important;
     }
+  }
+}
+
+@layer components {
+  /* поля на синей карточке: автозаполнение браузера не должно перекрашивать их в светлый */
+  .auth-input:-webkit-autofill {
+    -webkit-text-fill-color: #fff;
+    caret-color: #fff;
+    box-shadow: 0 0 0 1000px #000756 inset;
+  }
+}
+
+@layer utilities {
+  /* «жёсткая» тень текста из макета */
+  .text-shadow-navy {
+    text-shadow: 2px 2px 0 #000756;
+  }
+  .text-shadow-black {
+    text-shadow: 2px 2px 0 #000;
+  }
+  .text-shadow-blue {
+    text-shadow: 2px 2px 0 #0015ff;
   }
 }

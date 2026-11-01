@@ -27,7 +27,7 @@ export function ChatInput({ isGenerating, onSend, onAbort }: ChatInputProps) {
   };
 
   return (
-    <div className="mb-20 shrink-0 border-t border-ink-200 py-3 dark:border-ink-800 sm:mb-32">
+    <div className="mb-20 shrink-0 border-t-2 border-black py-3 dark:border-ink-700 sm:mb-32">
       <div className="flex items-end gap-2">
         <Textarea
           autoResize
@@ -43,7 +43,7 @@ export function ChatInput({ isGenerating, onSend, onAbort }: ChatInputProps) {
         {isGenerating ? (
           <AbortButton onAbort={onAbort} />
         ) : (
-          <Button onClick={handleSend} disabled={!canSend}>
+          <Button onClick={handleSend} disabled={!canSend} className="disabled:opacity-100">
             Отправить
           </Button>
         )}

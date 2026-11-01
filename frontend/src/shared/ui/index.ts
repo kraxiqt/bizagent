@@ -7,6 +7,8 @@ export type { InputProps } from './Input';
 export { Textarea } from './Textarea';
 export type { TextareaProps } from './Textarea';
 export { Spinner } from './Spinner';
+export { Logo } from './Logo';
+export { ResizeHandle } from './ResizeHandle';
 export { Toast } from './Toast';
 export type { ToastData, ToastVariant } from './Toast';
 export { ToastProvider, useToast } from './ToastProvider';

@@ -1,12 +1,15 @@
 import { Outlet } from 'react-router-dom';
-import { env } from '@/shared/config/env';
+import { Logo } from '@/shared/ui';
 
+// Белая страница, сверху название, ниже синяя карточка с чёрной кромкой (вход / регистрация).
 export function AuthLayout() {
   return (
-    <main className="flex min-h-full items-center justify-center px-4 py-10">
-      <div className="w-full max-w-sm">
-        <h1 className="mb-6 text-center text-2xl font-semibold tracking-tight">{env.APP_NAME}</h1>
-        <div className="rounded-xl border border-ink-200 bg-white p-6 shadow-sm dark:border-ink-800 dark:bg-ink-900">
+    <main className="flex min-h-full flex-col items-center bg-white px-4 py-10">
+      <div className="w-full max-w-md">
+        <h1 className="mb-10 flex justify-center">
+          <Logo size="lg" />
+        </h1>
+        <div className="bg-brand-600 p-4 shadow-hard">
           <Outlet />
         </div>
       </div>

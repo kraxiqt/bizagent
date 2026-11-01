@@ -1,8 +1,8 @@
+import type { ReactNode } from 'react';
 import { useTheme } from '@/app/providers';
 import { UserAvatar } from '@/entities/user';
 import { LogoutButton, useAuth } from '@/features/auth';
-import { env } from '@/shared/config/env';
-import { Button, IconButton } from '@/shared/ui';
+import { Button, IconButton, Logo } from '@/shared/ui';
 
 const SunIcon = (
   <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -28,24 +28,27 @@ interface ChatHeaderProps {
   disabled?: boolean;
   onNewConversation: () => void;
   onToggleSidebar?: () => void;
+  // дополнительный элемент справа (например, значок серии)
+  extra?: ReactNode;
 }
 
-export function ChatHeader({ title, disabled = false, onNewConversation, onToggleSidebar }: ChatHeaderProps) {
+export function ChatHeader({ title, disabled = false, onNewConversation, onToggleSidebar, extra }: ChatHeaderProps) {
   const { resolvedTheme, toggleTheme } = useTheme();
   const { user } = useAuth();
 
   return (
-    <div className="flex shrink-0 items-center border-b border-ink-200 px-4 py-3 dark:border-ink-800 sm:px-6">
-      <div className="mx-auto flex w-full max-w-3xl items-center justify-between gap-3">
+    <div className="flex shrink-0 items-center border-b-2 border-black px-4 py-3 dark:border-ink-700 sm:px-6">
+      <div className="flex w-full items-center justify-between gap-3">
         <div className="flex min-w-0 items-center gap-3">
           {onToggleSidebar && (
             <IconButton size="sm" label="История чатов" icon={MenuIcon} onClick={onToggleSidebar} />
           )}
-          <span className="shrink-0 font-semibold tracking-tight">{env.APP_NAME}</span>
+          <Logo size="sm" align="left" className="shrink-0" />
           <span className="hidden truncate text-sm text-ink-400 dark:text-ink-500 sm:inline">{title}</span>
         </div>
 
         <div className="flex shrink-0 items-center gap-2">
+          {extra}
           <Button
             variant="secondary"
             size="sm"
