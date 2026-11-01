@@ -20,7 +20,7 @@ export function LoginPage() {
 
   return (
     <>
-      <h2 className="mb-4 text-lg font-medium">Вход</h2>
+      <h2 className="mb-6 text-center font-display text-5xl font-medium text-white">Вход</h2>
       <LoginForm onSubmit={handleSubmit} loading={loading} error={error} />
     </>
   );

@@ -48,7 +48,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
         fieldClasses,
         'py-2 leading-6',
         autoResize ? 'resize-none overflow-y-auto' : 'resize-y',
-        error ? 'border-red-600 dark:border-red-500' : 'border-ink-300 dark:border-ink-700',
+        error ? 'border-red-600 dark:border-red-500' : 'border-black dark:border-ink-600',
         className,
       )}
       {...props}

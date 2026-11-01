@@ -3,7 +3,7 @@ import type { QuizResult } from "@/features/quiz";
 export function PlanView({ result }: { result: QuizResult }) {
   return (
     <>
-      <h1 className="mb-4 text-3xl font-bold uppercase tracking-wide">
+      <h1 className="mb-4 font-display text-4xl font-bold uppercase tracking-wide">
         Ваш план
       </h1>
       <p className="mb-2 text-base text-neutral-800">
@@ -15,7 +15,7 @@ export function PlanView({ result }: { result: QuizResult }) {
       </p>
       <ol className="flex flex-col gap-4">
         {result.plan.days.map((d) => (
-          <li key={d.day} className="border-2 border-black p-4">
+          <li key={d.day} className="rounded-[4px] border-2 border-black p-4">
             <p className="font-semibold">
               День {d.day}: {d.topic} ({d.duration_min} мин)
             </p>

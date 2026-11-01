@@ -19,7 +19,7 @@ export function RegisterPage() {
 
   return (
     <>
-      <h2 className="mb-4 text-lg font-medium">Регистрация</h2>
+      <h2 className="mb-6 text-center font-display text-5xl font-medium text-white">Регистрация</h2>
       <RegisterForm onSubmit={handleSubmit} loading={loading} error={error} />
     </>
   );

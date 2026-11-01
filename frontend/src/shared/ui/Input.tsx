@@ -7,11 +7,13 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   hint?: string;
 }
 
+// Общие классы для текстовых полей на светлом фоне (используются в Textarea чата).
 export const fieldClasses =
-  'w-full rounded-lg border bg-white px-3 text-sm text-ink-900 placeholder:text-ink-400 transition-colors ' +
+  'w-full rounded-[4px] border-2 bg-white px-3 text-base text-ink-900 placeholder:text-ink-400 transition-colors ' +
   'dark:bg-ink-900 dark:text-ink-100 dark:placeholder:text-ink-500 ' +
   'disabled:cursor-not-allowed disabled:opacity-60';
 
+// Поле для синей карточки входа/регистрации: тёмно-синяя заливка, белые подписи.
 export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   { label, error, hint, id, className, ...props },
   ref,
@@ -23,7 +25,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   return (
     <div className="flex flex-col gap-1.5">
       {label && (
-        <label htmlFor={inputId} className="text-sm font-medium text-ink-800 dark:text-ink-200">
+        <label htmlFor={inputId} className="font-display text-lg text-white">
           {label}
         </label>
       )}
@@ -33,21 +35,19 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         aria-invalid={error ? true : undefined}
         aria-describedby={describedBy}
         className={cn(
-          fieldClasses,
-          'h-10',
-          error
-            ? 'border-red-600 dark:border-red-500'
-            : 'border-ink-300 dark:border-ink-700',
+          'auth-input h-11 w-full rounded-none border-0 bg-navy px-3 font-display text-lg text-white',
+          'placeholder:text-white/40 focus-visible:outline-white disabled:cursor-not-allowed disabled:opacity-60',
+          error && 'ring-2 ring-white',
           className,
         )}
         {...props}
       />
       {error ? (
-        <p id={`${inputId}-error`} className="text-sm text-red-700 dark:text-red-400">
+        <p id={`${inputId}-error`} className="bg-white px-2 py-1 text-sm font-medium text-red-700">
           {error}
         </p>
       ) : hint ? (
-        <p id={`${inputId}-hint`} className="text-sm text-ink-500">
+        <p id={`${inputId}-hint`} className="text-sm text-white/70">
           {hint}
         </p>
       ) : null}

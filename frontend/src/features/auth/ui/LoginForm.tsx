@@ -21,9 +21,9 @@ export function LoginForm({ onSubmit, loading = false, error }: LoginFormProps) 
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
       {error && (
-        <p role="alert" className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700 dark:bg-red-950/40 dark:text-red-400">
+        <p role="alert" className="bg-white px-3 py-2 text-sm font-medium text-red-700">
           {error}
         </p>
       )}
@@ -44,12 +44,14 @@ export function LoginForm({ onSubmit, loading = false, error }: LoginFormProps) 
         onChange={(e) => setPassword(e.target.value)}
         required
       />
-      <Button type="submit" fullWidth loading={loading}>
-        Войти
-      </Button>
-      <p className="text-center text-sm text-ink-600 dark:text-ink-400">
+      <div className="flex justify-center">
+        <Button type="submit" variant="inverted" size="lg" loading={loading} className="px-4 text-2xl">
+          Войти
+        </Button>
+      </div>
+      <p className="text-center font-display text-base font-medium text-white/70">
         Нет аккаунта?{' '}
-        <Link to={ROUTES.REGISTER} className="font-medium text-brand-700 underline dark:text-brand-400">
+        <Link to={ROUTES.REGISTER} className="font-bold text-white hover:underline">
           Зарегистрироваться
         </Link>
       </p>
