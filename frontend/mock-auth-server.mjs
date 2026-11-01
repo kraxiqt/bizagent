@@ -3,7 +3,7 @@
  * не нужен npm install, это только для модулей Node!!!!
  * Данные только в процессе
  * Запуск:
- *   node mock-auth-server.mjs
+ * node mock-auth-server.mjs
  */
 import { createServer } from 'node:http';
 import { randomUUID, randomBytes } from 'node:crypto';
