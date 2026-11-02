@@ -9,6 +9,7 @@ export interface QuizQuestion {
 export interface QuizSubmitDto {
   days: 7 | 14 | 30;
   hoursPerDay: number;
+  goal: string;
   answers: { questionId: string; optionIndex: number }[];
 }
 
