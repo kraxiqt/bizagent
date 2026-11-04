@@ -4,62 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="fix(src): восстановление порядка страниц и api к бэку">
+    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="feat(src): механика страйка">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.development" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.local" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.production" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/mock-auth-server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/mock-auth-server.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/@tanstack_react-query.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/@tanstack_react-query.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-markdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-markdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-markdown.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-markdown.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-router-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-router-dom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/remark-gfm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/remark-gfm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/remark-gfm.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/remark-gfm.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/tailwind-merge.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/tailwind-merge.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/zustand.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/zustand.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/zustand.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/zustand.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/layouts/AuthLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layouts/AuthLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/layouts/ChatLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layouts/ChatLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/entities/user/ui/UserAvatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/entities/user/ui/UserAvatar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/auth/ui/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/auth/ui/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/auth/ui/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/auth/ui/RegisterForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatSidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/EmptyState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/EmptyState.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/MessageBubble.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/MessageBubble.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/auth/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/auth/LoginPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/auth/RegisterPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/auth/RegisterPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/chat/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/chat/ChatPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/chat/PlanPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/chat/PlanPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/PlanView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/PlanView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/QuizPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/QuizPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/shared/config/env.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/config/env.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/shared/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/IconButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/IconButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Textarea.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,61 +40,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.283346261889185E-6" />
-      <entry key="MS500" value="0.08989731135247979" />
-      <entry key="S2" value="0.899487387731989" />
-      <entry key="S5" value="1.4499593074131447" />
-      <entry key="S10" value="1.7024188452357043" />
-      <entry key="S30" value="2.0366989904999704" />
-      <entry key="S60" value="3.0173187899440177" />
-      <entry key="M2" value="5.389236196886711" />
-      <entry key="M5" value="10.844147396235469" />
-      <entry key="M10" value="15.447658792329683" />
-      <entry key="M15" value="17.707390000224006" />
-      <entry key="M30" value="20.505761325393443" />
-      <entry key="H1" value="22.154253602379097" />
-      <entry key="H2" value="23.050828402341992" />
-      <entry key="H4" value="23.518621424890206" />
-      <entry key="D1" value="23.91880763950014" />
-      <entry key="W1" value="23.988377263301015" />
+      <entry key="MS100" value="1.3054599652049368E-13" />
+      <entry key="MS500" value="0.004429190105366077" />
+      <entry key="S2" value="0.4329492257373006" />
+      <entry key="S5" value="1.0842246140706293" />
+      <entry key="S10" value="1.4733664409603702" />
+      <entry key="S30" value="1.955888702939379" />
+      <entry key="S60" value="2.4481220897212363" />
+      <entry key="M2" value="3.0066605964515714" />
+      <entry key="M5" value="4.55202236264508" />
+      <entry key="M10" value="9.04678591496578" />
+      <entry key="M15" value="13.163180527842243" />
+      <entry key="M30" value="20.54469337111104" />
+      <entry key="H1" value="26.258044374147303" />
+      <entry key="H2" value="29.833749951685867" />
+      <entry key="H4" value="31.837066056636424" />
+      <entry key="D1" value="33.62787676414712" />
+      <entry key="W1" value="33.9465471537314" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
       <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000007981227" />
-      <entry key="S10" value="1.0000417739926213" />
-      <entry key="S30" value="1.0786467399754476" />
-      <entry key="S60" value="1.5661443496279903" />
-      <entry key="M2" value="2.7234521317068836" />
-      <entry key="M5" value="5.113720975701146" />
-      <entry key="M10" value="6.922227026579189" />
-      <entry key="M15" value="7.764439455421795" />
-      <entry key="M30" value="8.776121109580862" />
-      <entry key="H1" value="9.358423005754258" />
-      <entry key="H2" value="9.671368207044454" />
-      <entry key="H4" value="9.83366594447496" />
-      <entry key="D1" value="9.97199233930629" />
-      <entry key="W1" value="9.995991851746046" />
+      <entry key="S5" value="1.0000002662343392" />
+      <entry key="S10" value="1.0005159790105251" />
+      <entry key="S30" value="1.0802067055831246" />
+      <entry key="S60" value="1.283210102157401" />
+      <entry key="M2" value="1.5356227065736774" />
+      <entry key="M5" value="2.150715041283645" />
+      <entry key="M10" value="3.839755322088382" />
+      <entry key="M15" value="5.371219114675081" />
+      <entry key="M30" value="8.093940777665775" />
+      <entry key="H1" value="10.184968763397514" />
+      <entry key="H2" value="11.487549987510635" />
+      <entry key="H4" value="12.215477762785602" />
+      <entry key="D1" value="12.865127322001252" />
+      <entry key="W1" value="12.980629042040485" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="7.872599954559713E-6" />
-      <entry key="MS500" value="0.18113248269240861" />
-      <entry key="S2" value="1.4478939016997103" />
-      <entry key="S5" value="2.236131554266836" />
-      <entry key="S10" value="2.5890729306322364" />
-      <entry key="S30" value="3.0731473984439233" />
-      <entry key="S60" value="4.552668487462773" />
-      <entry key="M2" value="8.085406463877824" />
-      <entry key="M5" value="15.936777276732798" />
-      <entry key="M10" value="22.35540172105656" />
-      <entry key="M15" value="25.460939016405007" />
-      <entry key="M30" value="29.27569191462575" />
-      <entry key="H1" value="31.509366001012744" />
-      <entry key="H2" value="32.720483320883915" />
-      <entry key="H4" value="33.35141567369223" />
-      <entry key="D1" value="33.89065255678111" />
-      <entry key="W1" value="33.98434800171319" />
+      <entry key="MS100" value="2.3320013875496663E-6" />
+      <entry key="MS500" value="0.07912698661984913" />
+      <entry key="S2" value="0.9547727417510836" />
+      <entry key="S5" value="1.8547108945172899" />
+      <entry key="S10" value="2.3514991440892183" />
+      <entry key="S30" value="2.991358994754928" />
+      <entry key="S60" value="3.7059977536964035" />
+      <entry key="M2" value="4.52783918779283" />
+      <entry key="M5" value="6.694742607234256" />
+      <entry key="M10" value="12.879061328314874" />
+      <entry key="M15" value="18.52726414152398" />
+      <entry key="M30" value="28.63313914629657" />
+      <entry key="H1" value="36.43952135281347" />
+      <entry key="H2" value="41.319321580852474" />
+      <entry key="H4" value="44.05148959546143" />
+      <entry key="D1" value="46.49281869894449" />
+      <entry key="W1" value="46.92714946583517" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -286,7 +232,39 @@
       <option name="project" value="LOCAL" />
       <updated>1793207238702</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix(src): node и служебные файлы">
+      <option name="closed" value="true" />
+      <created>1793552289627</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1793552289627</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix(src): xml">
+      <option name="closed" value="true" />
+      <created>1793552309591</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1793552309591</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat(src): новый дизайн">
+      <option name="closed" value="true" />
+      <created>1793552372655</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1793552372655</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat(src): механика страйка">
+      <option name="closed" value="true" />
+      <created>1793552389900</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1793552389900</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +281,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="frontend" />
+                        <option value="origin/frontend" />
                       </list>
                     </value>
                   </entry>
@@ -327,6 +305,10 @@
     <MESSAGE value="feat(src/pages): ui чата и страницы авторизации/регистрации" />
     <MESSAGE value="feat(src/app): провайдеры, макеты и каркас роутера" />
     <MESSAGE value="fix(src/app): порядок страниц и конфиги" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(src/app): порядок страниц и конфиги" />
+    <MESSAGE value="fix(src): node и служебные файлы" />
+    <MESSAGE value="fix(src): xml" />
+    <MESSAGE value="feat(src): новый дизайн" />
+    <MESSAGE value="feat(src): механика страйка" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(src): механика страйка" />
   </component>
 </project>
