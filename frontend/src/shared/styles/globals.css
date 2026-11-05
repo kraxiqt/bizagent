@@ -31,6 +31,36 @@
     @apply bg-ink-950 text-ink-100;
   }
 
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  *::-webkit-scrollbar-track {
+    background: #eef0ff;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: #0015ff;
+  }
+  .dark *::-webkit-scrollbar-track {
+    background: #1c1917;
+  }
+
+  /* Firefox не знает ::-webkit-scrollbar: у него тонкая полоса без стрелок задаётся так. */
+  @supports (-moz-appearance: none) {
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #0015ff #eef0ff;
+    }
+    .dark * {
+      scrollbar-color: #0015ff #1c1917;
+    }
+  }
+
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-brand-600;
   }
@@ -50,7 +80,10 @@
 }
 
 @layer components {
-  /* поля на синей карточке: автозаполнение браузера не должно перекрашивать их в светлый */
+  .scrollbar-brand {
+    scrollbar-gutter: stable;
+  }
+
   .auth-input:-webkit-autofill {
     -webkit-text-fill-color: #fff;
     caret-color: #fff;
@@ -59,7 +92,12 @@
 }
 
 @layer utilities {
-  /* «жёсткая» тень текста из макета */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
   .text-shadow-navy {
     text-shadow: 2px 2px 0 #000756;
   }
