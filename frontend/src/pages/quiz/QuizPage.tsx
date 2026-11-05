@@ -3,13 +3,29 @@ import { useNavigate } from "react-router-dom";
 import { ROUTES } from "@/app/router/routes";
 import { quizApi, type QuizResult } from "@/features/quiz";
 import { getErrorMessage } from "@/shared/api/errorHandler";
+import { cn } from "@/shared/lib/cn";
+import { Button, Logo, Textarea } from "@/shared/ui";
 import { QUIZ_QUESTIONS } from "./quizData";
 import { PlanView } from "./PlanView";
 
 const DAYS_OPTIONS = [7, 14, 30] as const;
+
 const HOURS_OPTIONS = [0.5, 1, 2, 3];
 const GOAL_MIN_LENGTH = 5;
 const GOAL_MAX_LENGTH = 500;
+
+// Вариант ответа: белая карточка с чёрной рамкой, выбранный — синий с тёмной кромкой снизу.
+const optionClass = (active: boolean) =>
+  cn(
+    "rounded-[4px] border-2 border-black px-5 py-4 text-left font-display text-lg font-medium transition-colors",
+    active
+      ? "bg-brand-600 text-white shadow-inset-hard"
+      : "bg-white text-black hover:bg-brand-50",
+  );
+
+// Короткие кнопки настроек плана (дни / часы).
+const chipClass = (active: boolean) =>
+  cn(optionClass(active), "min-w-[90px] px-4 py-3 text-center");
 
 export function QuizPage() {
   const navigate = useNavigate();
@@ -58,25 +74,22 @@ export function QuizPage() {
     }
   };
 
-  const optionClass = (active: boolean) =>
-    `h-12 min-w-[90px] border-2 border-black px-4 text-sm font-semibold uppercase tracking-wide transition-colors ${
-      active
-        ? "bg-black text-white"
-        : "bg-white text-black hover:bg-neutral-100"
-    }`;
-
   if (result) {
     return (
       <main className="flex min-h-full flex-col bg-white px-6 py-10 text-black sm:px-10">
+        <div className="mb-12 flex justify-center">
+          <Logo size="lg" />
+        </div>
         <div className="mx-auto w-full max-w-2xl">
           <PlanView result={result} />
-          <button
-            type="button"
+          <Button
+            size="lg"
+            fullWidth
+            className="mt-10"
             onClick={() => navigate(ROUTES.CHAT, { replace: true })}
-            className="mt-10 h-12 w-full border-2 border-black bg-black text-base font-semibold uppercase tracking-wide text-white hover:bg-white hover:text-black"
           >
             Перейти в чат
-          </button>
+          </Button>
         </div>
       </main>
     );
@@ -84,8 +97,11 @@ export function QuizPage() {
 
   return (
     <main className="flex min-h-full flex-col bg-white px-6 py-10 text-black sm:px-10">
+      <div className="mb-12 flex justify-center">
+        <Logo size="lg" />
+      </div>
       <div className="mx-auto w-full max-w-2xl">
-        <div className="mb-2 flex items-center justify-between text-sm font-medium text-neutral-700">
+        <div className="mb-2 flex items-center justify-between font-sans text-base font-bold">
           <span>
             {isGoal
               ? "Ваша цель"
@@ -95,33 +111,34 @@ export function QuizPage() {
           </span>
           <span>{Math.round(progress)}%</span>
         </div>
-        <div className="mb-10 h-2 w-full border border-black bg-white">
+        <div className="mb-10 h-2.5 w-full border border-black bg-white">
           <div
-            className="h-full bg-black transition-all"
+            className="h-full bg-brand-600 transition-all"
             style={{ width: `${progress}%` }}
           />
         </div>
 
         {isGoal ? (
           <>
-            <h1 className="mb-6 text-2xl font-semibold sm:text-3xl">
+            <h1 className="mb-6 font-sans text-2xl font-bold leading-snug">
               Опишите цель, которую хотите достичь
             </h1>
-            <textarea
+            <Textarea
               value={goal}
               onChange={(e) => setGoal(e.target.value)}
               maxLength={GOAL_MAX_LENGTH}
               rows={6}
               placeholder="Например: запустить онлайн-школу английского и получить первых 10 клиентов за 2 месяца"
-              className="w-full border-2 border-black bg-white p-4 text-base text-black"
+              aria-label="Ваша цель"
+              className="p-4 text-lg"
             />
-            <p className="mt-2 text-right text-sm text-neutral-600">
+            <p className="mt-2 text-right font-sans text-sm text-ink-600">
               {goal.length}/{GOAL_MAX_LENGTH}
             </p>
           </>
         ) : isSettings ? (
           <>
-            <h1 className="mb-6 text-2xl font-semibold sm:text-3xl">
+            <h1 className="mb-6 font-sans text-2xl font-bold leading-snug">
               Сколько дней и часов в день?
             </h1>
             <div className="mb-6 flex flex-wrap gap-3">
@@ -129,7 +146,7 @@ export function QuizPage() {
                 <button
                   key={d}
                   type="button"
-                  className={optionClass(days === d)}
+                  className={chipClass(days === d)}
                   onClick={() => setDays(d)}
                 >
                   {d} дней
@@ -141,7 +158,7 @@ export function QuizPage() {
                 <button
                   key={h}
                   type="button"
-                  className={optionClass(hoursPerDay === h)}
+                  className={chipClass(hoursPerDay === h)}
                   onClick={() => setHoursPerDay(h)}
                 >
                   {h} ч
@@ -151,7 +168,7 @@ export function QuizPage() {
           </>
         ) : (
           <>
-            <h1 className="mb-8 text-2xl font-semibold leading-snug sm:text-3xl">
+            <h1 className="mb-6 font-sans text-2xl font-bold leading-snug">
               {question.text}
             </h1>
             <div
@@ -168,11 +185,7 @@ export function QuizPage() {
                     role="radio"
                     aria-checked={isChecked}
                     onClick={() => selectOption(index)}
-                    className={`flex items-center gap-4 border-2 border-black px-5 py-4 text-left text-base transition-colors ${
-                      isChecked
-                        ? "bg-black text-white"
-                        : "bg-white text-black hover:bg-neutral-100"
-                    }`}
+                    className={optionClass(isChecked)}
                   >
                     {option}
                   </button>
@@ -185,39 +198,37 @@ export function QuizPage() {
         {error && (
           <p
             role="alert"
-            className="mt-6 border-2 border-black px-3 py-2 text-sm"
+            className="mt-6 rounded-[4px] border-2 border-black px-3 py-2 text-sm"
           >
             {error}
           </p>
         )}
 
         <div className="mt-10 flex items-center justify-between gap-4">
-          <button
-            type="button"
+          <Button
+            variant="secondary"
             onClick={() => setStep((s) => Math.max(0, s - 1))}
             disabled={step === 0 || submitting}
-            className="h-11 min-w-[120px] border-2 border-black bg-white px-6 text-sm font-semibold uppercase tracking-wide disabled:opacity-40"
+            className="min-w-[110px] font-bold uppercase"
           >
             Назад
-          </button>
+          </Button>
           {isGoal ? (
-            <button
-              type="button"
+            <Button
               onClick={submit}
               disabled={submitting || !goalReady}
-              className="h-11 min-w-[120px] border-2 border-black bg-black px-6 text-sm font-semibold uppercase tracking-wide text-white disabled:opacity-40"
+              className="min-w-[110px] font-bold uppercase"
             >
               {submitting ? "Создаём план..." : "Создать план"}
-            </button>
+            </Button>
           ) : (
-            <button
-              type="button"
+            <Button
               onClick={() => setStep((s) => s + 1)}
               disabled={!isSettings && selected === null}
-              className="h-11 min-w-[120px] border-2 border-black bg-black px-6 text-sm font-semibold uppercase tracking-wide text-white disabled:opacity-40"
+              className="min-w-[110px] font-bold uppercase"
             >
               Далее
-            </button>
+            </Button>
           )}
         </div>
       </div>
