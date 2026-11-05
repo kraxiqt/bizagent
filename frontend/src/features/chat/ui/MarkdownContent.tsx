@@ -3,13 +3,18 @@ import remarkGfm from 'remark-gfm';
 
 // Стили под Tailwind (плагин typography не подключён, поэтому размечаем элементы вручную).
 const components: Components = {
-  h1: ({ children }) => <h3 className="mb-2 mt-4 text-base font-semibold first:mt-0">{children}</h3>,
-  h2: ({ children }) => <h3 className="mb-2 mt-4 text-base font-semibold first:mt-0">{children}</h3>,
-  h3: ({ children }) => <h4 className="mb-1.5 mt-3 text-sm font-semibold first:mt-0">{children}</h4>,
-  h4: ({ children }) => <h5 className="mb-1 mt-3 text-sm font-semibold first:mt-0">{children}</h5>,
+  // уровни заголовков в странице уже заняты, поэтому теги h3–h5, а визуально — по убыванию размера
+  h1: ({ children }) => (
+    <h3 className="mb-2 mt-5 border-b-2 border-brand-600 pb-1 font-display text-xl font-bold first:mt-0">{children}</h3>
+  ),
+  h2: ({ children }) => <h3 className="mb-2 mt-4 font-display text-lg font-bold first:mt-0">{children}</h3>,
+  h3: ({ children }) => <h4 className="mb-1.5 mt-3 font-display text-base font-bold first:mt-0">{children}</h4>,
+  h4: ({ children }) => <h5 className="mb-1 mt-3 font-display text-sm font-bold first:mt-0">{children}</h5>,
+  strong: ({ children }) => <strong className="font-bold">{children}</strong>,
+  em: ({ children }) => <em className="italic">{children}</em>,
   p: ({ children }) => <p className="my-2 first:mt-0 last:mb-0">{children}</p>,
-  ul: ({ children }) => <ul className="my-2 list-disc space-y-1 pl-5">{children}</ul>,
-  ol: ({ children }) => <ol className="my-2 list-decimal space-y-1 pl-5">{children}</ol>,
+  ul: ({ children }) => <ul className="my-2 list-disc space-y-1 pl-5 marker:text-brand-600">{children}</ul>,
+  ol: ({ children }) => <ol className="my-2 list-decimal space-y-1 pl-5 marker:font-bold marker:text-brand-600">{children}</ol>,
   a: ({ href, children }) => (
     <a
       href={href}

@@ -1,6 +1,21 @@
 import { useState, type KeyboardEvent } from 'react';
-import { Button, Textarea } from '@/shared/ui';
+import { IconButton, Textarea } from '@/shared/ui';
 import { AbortButton } from './AbortButton';
+
+const SendIcon = (
+  <svg
+    viewBox="0 0 24 24"
+    className="h-5 w-5"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="3"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M12 19V5M5 12l7-7 7 7" />
+  </svg>
+);
 
 interface ChatInputProps {
   isGenerating: boolean;
@@ -28,7 +43,7 @@ export function ChatInput({ isGenerating, onSend, onAbort }: ChatInputProps) {
 
   return (
     <div className="mb-20 shrink-0 border-t-2 border-black py-3 dark:border-ink-700 sm:mb-32">
-      <div className="flex items-end gap-2">
+      <div className="mx-auto flex w-full max-w-3xl items-end gap-3 px-4">
         <Textarea
           autoResize
           maxHeight={160}
@@ -40,12 +55,19 @@ export function ChatInput({ isGenerating, onSend, onAbort }: ChatInputProps) {
           className="flex-1"
           aria-label="Сообщение"
         />
+        {/* значок стоит справа от поля: отправить, а во время ответа — остановить */}
         {isGenerating ? (
           <AbortButton onAbort={onAbort} />
         ) : (
-          <Button onClick={handleSend} disabled={!canSend} className="disabled:opacity-100">
-            Отправить
-          </Button>
+          <IconButton
+            label="Отправить"
+            variant="primary"
+            size="md"
+            icon={SendIcon}
+            onClick={handleSend}
+            disabled={!canSend}
+            className="h-11 w-11 disabled:opacity-100"
+          />
         )}
       </div>
     </div>

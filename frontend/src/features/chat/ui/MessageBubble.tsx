@@ -22,7 +22,7 @@ export function MessageBubble({ message }: MessageBubbleProps) {
       <div className={cn('group flex max-w-[85%] flex-col gap-1', isUser ? 'items-end' : 'items-start')}>
         <div
           className={cn(
-            'break-words rounded-[8px] border-2 px-4 py-2.5 text-sm leading-relaxed',
+            'break-words rounded-[8px] border-2 px-4 py-2.5 text-[15px] leading-relaxed',
             // у пользователя — обычный текст с переносами, у ассистента — Markdown
             isUser && 'whitespace-pre-wrap',
             isUser

@@ -74,7 +74,7 @@ export function ChatSidebar({
         </Button>
       </div>
 
-      <nav aria-label="История чатов" className="min-h-0 flex-1 overflow-y-auto px-2 pb-3">
+      <nav aria-label="История чатов" className="scrollbar-brand min-h-0 flex-1 overflow-y-auto px-2 pb-3">
         {items.length === 0 ? (
           <p className="px-2 py-4 text-sm text-ink-400 dark:text-ink-500">
             История пуста. Напишите первое сообщение.

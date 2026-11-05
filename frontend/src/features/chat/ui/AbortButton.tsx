@@ -1,4 +1,4 @@
-import { Button } from '@/shared/ui';
+import { IconButton } from '@/shared/ui';
 
 const StopIcon = (
   <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
@@ -10,11 +10,9 @@ interface AbortButtonProps {
   onAbort: () => void;
 }
 
-//заглушка отмены запроса TODO()
+// Значок «стоп» на месте кнопки отправки, пока бот печатает ответ.
 export function AbortButton({ onAbort }: AbortButtonProps) {
   return (
-    <Button variant="secondary" size="sm" leftIcon={StopIcon} onClick={onAbort}>
-      Остановить
-    </Button>
+    <IconButton label="Остановить" variant="secondary" size="md" icon={StopIcon} onClick={onAbort} className="h-11 w-11" />
   );
 }
