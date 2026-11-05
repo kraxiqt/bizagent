@@ -54,7 +54,7 @@ export function PlanPanel({ width }: PlanPanelProps) {
   return (
     <aside
       style={width ? ({ "--plan-w": `${width}px` } as CSSProperties) : undefined}
-      className="hidden w-80 shrink-0 flex-col overflow-y-auto border-l-2 border-black p-4 lg:flex lg:w-[var(--plan-w,20rem)] dark:border-ink-700"
+      className="scrollbar-brand hidden w-80 shrink-0 flex-col overflow-y-auto border-l-2 border-black p-4 lg:flex lg:w-[var(--plan-w,20rem)] dark:border-ink-700"
     >
       <StreakCard />
 

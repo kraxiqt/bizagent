@@ -24,15 +24,13 @@ export function ChatPage() {
   return (
     <div className="flex h-full min-h-0">
       {/* свободное место между историей и планом; сам диалог стоит по центру этого места */}
-      <div className="flex h-full min-h-0 min-w-0 flex-1 justify-center px-4">
-        <div className="flex h-full min-h-0 w-full max-w-3xl flex-col">
-          <MessageList messages={messages} onExamplePick={sendMessage} />
-          <ChatInput
-            isGenerating={isGenerating}
-            onSend={sendMessage}
-            onAbort={stopGeneration}
-          />
-        </div>
+      <div className="flex h-full min-h-0 min-w-0 flex-1 flex-col">
+        <MessageList messages={messages} onExamplePick={sendMessage} />
+        <ChatInput
+          isGenerating={isGenerating}
+          onSend={sendMessage}
+          onAbort={stopGeneration}
+        />
       </div>
       <ResizeHandle
         edge="left"

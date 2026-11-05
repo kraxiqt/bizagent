@@ -26,7 +26,11 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
     const el = innerRef.current;
     if (!autoResize || !el) return;
     el.style.height = 'auto';
-    el.style.height = `${Math.min(el.scrollHeight, maxHeight)}px`;
+    // scrollHeight не включает рамку; без неё поле оказывалось на пару пикселей ниже текста и «прокручивалось»
+    const borders = el.offsetHeight - el.clientHeight;
+    const full = el.scrollHeight + borders;
+    el.style.height = `${Math.min(full, maxHeight)}px`;
+    el.style.overflowY = full > maxHeight ? 'auto' : 'hidden';
   };
 
   // controlled: пересчёт при программном изменении значения (например, очистка после отправки)
@@ -47,7 +51,8 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
       className={cn(
         fieldClasses,
         'py-2 leading-6',
-        autoResize ? 'resize-none overflow-y-auto' : 'resize-y',
+        // у автоувеличивающегося поля полосу прокрутки не показываем: длинный текст листается колесом и курсором
+        autoResize ? 'no-scrollbar resize-none overflow-y-hidden' : 'resize-y',
         error ? 'border-red-600 dark:border-red-500' : 'border-black dark:border-ink-600',
         className,
       )}
