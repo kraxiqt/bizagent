@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 import { cn } from '@/shared/lib/cn';
 import { Button, IconButton } from '@/shared/ui';
 
@@ -38,6 +38,8 @@ interface ChatSidebarProps {
   onNew: () => void;
   // ширина на десктопе, px (меняется ручкой в ChatLayout)
   width?: number;
+  // блоки внизу панели (цель, серия)
+  footer?: ReactNode;
   className?: string;
 }
 
@@ -50,6 +52,7 @@ export function ChatSidebar({
   onDelete,
   onNew,
   width,
+  footer,
   className,
 }: ChatSidebarProps) {
   return (
@@ -117,6 +120,10 @@ export function ChatSidebar({
           </ul>
         )}
       </nav>
+
+      {footer && (
+        <div className="shrink-0 space-y-3 border-t-2 border-black p-3 dark:border-ink-700">{footer}</div>
+      )}
     </aside>
   );
 }

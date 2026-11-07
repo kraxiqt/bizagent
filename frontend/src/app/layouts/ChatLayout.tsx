@@ -10,7 +10,8 @@ import {
   useChatHistorySync,
   usePanelsStore,
 } from '@/features/chat';
-import { StreakBadge, useStreakSync } from '@/features/streak';
+import { GoalBanner } from '@/features/quiz';
+import { StreakCard, useStreakSync } from '@/features/streak';
 import { useViewportWidth } from '@/shared/lib/useViewportWidth';
 import { ResizeHandle } from '@/shared/ui';
 
@@ -67,7 +68,6 @@ export function ChatLayout() {
         disabled={isGenerating}
         onNewConversation={startNewConversation}
         onToggleSidebar={() => setSidebarOpen((v) => !v)}
-        extra={<StreakBadge />}
       />
 
       <div className="relative flex min-h-0 flex-1">
@@ -83,6 +83,12 @@ export function ChatLayout() {
           items={items}
           activeId={conversation.id}
           width={historyShown}
+          footer={
+            <>
+              <GoalBanner userId={userId} />
+              <StreakCard />
+            </>
+          }
           disabled={isGenerating}
           onSelect={(id) => {
             if (id !== conversation.id) openConversation(id);
