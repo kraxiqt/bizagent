@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="feat(src): мелкие правки скрола и явное объявление палитры">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/assets/cat-bw.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/layouts/ChatLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layouts/ChatLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatSidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/quiz/api/quizApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/quiz/api/quizApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/quiz/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/quiz/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/streak/ui/StreakCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/streak/ui/StreakCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/chat/PlanPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/chat/PlanPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/QuizPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/QuizPage.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="feat(src): перемещен стрик и цель на левой панели" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -301,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793849179763</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat(src): перемещен стрик и цель на левой панели">
+      <option name="closed" value="true" />
+      <created>1794038546100</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1794038546100</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +347,7 @@
     <MESSAGE value="feat(src): откат формата кнопки" />
     <MESSAGE value="feat(src): все доп.файлы для правок" />
     <MESSAGE value="feat(src): замена .md на сообщение и скролл внутри ввода" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(src): замена .md на сообщение и скролл внутри ввода" />
+    <MESSAGE value="feat(src): перемещен стрик и цель на левой панели" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(src): перемещен стрик и цель на левой панели" />
   </component>
 </project>
