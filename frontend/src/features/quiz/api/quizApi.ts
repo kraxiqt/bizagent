@@ -38,6 +38,8 @@ export interface QuizPlan {
 export interface QuizResult {
   diagnosis: QuizDiagnosis;
   plan: QuizPlan;
+  // если бэкенд отдаёт сохранённую цель, показываем её; иначе берём ту, что пользователь ввёл в этом браузере
+  goal?: string;
 }
 
 export const quizApi = {

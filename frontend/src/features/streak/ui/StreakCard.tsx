@@ -3,8 +3,8 @@ import { useStreak } from '../model/hooks';
 import { lastDays, pluralDays } from '../model/streak';
 import { FlameIcon } from './FlameIcon';
 
-// Карточка серии в панели плана: число дней, рекорд, неделя огоньков и подсказка, что делать дальше.
-export function StreakCard() {
+// Карточка серии в левой панели чата: число дней, рекорд, неделя огоньков и подсказка, что делать дальше.
+export function StreakCard({ className }: { className?: string }) {
   const { data, today, status } = useStreak();
   const week = lastDays(data.dates, today, 7);
 
@@ -19,7 +19,7 @@ export function StreakCard() {
   return (
     <section
       aria-label="Серия обучения"
-      className="mb-4 rounded-[4px] border-2 border-black p-3 shadow-hard-sm dark:border-ink-600"
+      className={cn('rounded-[4px] border-2 border-black p-3 shadow-hard-sm dark:border-ink-600', className)}
     >
       <div className="flex items-center gap-2">
         <FlameIcon lit={status.doneToday || status.atRisk} className="h-9 w-9" />

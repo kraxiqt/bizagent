@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ROUTES } from "@/app/router/routes";
 import { quizApi, type QuizResult } from "@/features/quiz";
 import {
-  StreakCard,
   getCompleteBlock,
   getStreakStatus,
   planKeyOf,
@@ -56,8 +55,6 @@ export function PlanPanel({ width }: PlanPanelProps) {
       style={width ? ({ "--plan-w": `${width}px` } as CSSProperties) : undefined}
       className="scrollbar-brand hidden w-80 shrink-0 flex-col overflow-y-auto border-l-2 border-black p-4 lg:flex lg:w-[var(--plan-w,20rem)] dark:border-ink-700"
     >
-      <StreakCard />
-
       <h2 className="mb-3 font-display text-lg font-bold uppercase tracking-wide">
         Ваш план
       </h2>

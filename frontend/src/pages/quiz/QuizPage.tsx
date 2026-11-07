@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "@/app/router/routes";
-import { quizApi, type QuizResult } from "@/features/quiz";
+import { useAuthStore } from "@/features/auth";
+import { quizApi, useGoalStore, type QuizResult } from "@/features/quiz";
 import { getErrorMessage } from "@/shared/api/errorHandler";
 import { cn } from "@/shared/lib/cn";
 import { Button, Logo, Textarea } from "@/shared/ui";
@@ -29,6 +30,7 @@ const chipClass = (active: boolean) =>
 
 export function QuizPage() {
   const navigate = useNavigate();
+  const userId = useAuthStore((s) => s.user?.id ?? null);
   const total = QUIZ_QUESTIONS.length;
 
   // 0..total-1 — вопросы, total — настройки плана, total+1 — цель
@@ -66,6 +68,8 @@ export function QuizPage() {
           optionIndex: answers[i] as number,
         })),
       });
+      // цель покажем в левой панели чата
+      if (userId) useGoalStore.getState().set(userId, goal.trim());
       setResult(data);
     } catch (err) {
       setError(getErrorMessage(err, "Не удалось создать план"));

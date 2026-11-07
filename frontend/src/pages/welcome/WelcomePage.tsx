@@ -5,12 +5,12 @@ import { cn } from '@/shared/lib/cn';
 import { Logo } from '@/shared/ui';
 import { QUIZ_QUESTIONS } from '@/pages/quiz/quizData';
 
-// Серый блок-заглушка из макета. Чтобы вставить картинку, замените <Pic /> на <img src="..." alt="..." />.
-function Pic({ className }: { className?: string }) {
+//Картинка из public/assets (путь /assets/имя-файла). Без src показывается серая заглушка из макета
+function Pic({ className, src, alt = '' }: { className?: string; src?: string; alt?: string }) {
+  if (src) return <img src={src} alt={alt} className={cn('object-contain', className)} />;
   return <div aria-hidden="true" className={cn('bg-[#d9d9d9]', className)} />;
 }
 
-// Синяя «плашка» с чёрной кромкой снизу — заголовок раздела.
 function SectionTitle({ children }: { children: ReactNode }) {
   return (
     <h2 className="mx-auto w-fit border-b-4 border-black bg-brand-600 px-10 py-3 text-center font-display text-2xl font-light text-white sm:px-12 sm:text-[28px]">
@@ -19,10 +19,11 @@ function SectionTitle({ children }: { children: ReactNode }) {
   );
 }
 
-const BENEFITS = [
-  'Узнать тонкости предпринимательства',
-  'Составить свой идеальный бизнес план',
-  'Начать купаться в море своих денег',
+
+const BENEFITS: { text: string; image?: string }[] = [
+  { text: 'Узнать тонкости предпринимательства', image: '/assets/lander-s1.svg' },
+  { text: 'Составить свой идеальный бизнес план', image: '/assets/lander-s2.png' },
+  { text: 'Начать купаться в море своих денег' },
 ];
 
 const STEPS = [
@@ -50,7 +51,11 @@ export function WelcomePage() {
 
       <main className="flex-1">
         <section className="mx-auto mt-10 grid w-full max-w-4xl items-center gap-8 px-6 md:grid-cols-[minmax(0,340px)_1fr]">
-          <Pic className="mx-auto aspect-[3/4] w-full max-w-[340px]" />
+          <Pic
+            src="/assets/lander-main.svg"
+            alt=""
+            className="mx-auto aspect-[478/635] w-full max-w-[340px]"
+          />
 
           <div>
             <h1 className="font-display text-5xl font-medium leading-tight md:text-6xl">
@@ -74,10 +79,10 @@ export function WelcomePage() {
         <section className="mx-auto mt-24 w-full max-w-4xl px-6">
           <SectionTitle>Вам предстоит:</SectionTitle>
           <ul className="mt-10 grid gap-10 sm:grid-cols-3">
-            {BENEFITS.map((text) => (
+            {BENEFITS.map(({ text, image }) => (
               <li key={text} className="flex flex-col items-center gap-6 text-center">
                 <p className="min-h-14 max-w-[14rem] font-display text-xl font-light leading-snug">{text}</p>
-                <Pic className="aspect-square w-full max-w-[200px]" />
+                <Pic src={image} className="aspect-square w-full max-w-[200px]" />
               </li>
             ))}
           </ul>
