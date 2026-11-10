@@ -9,6 +9,7 @@ import {
   NotFoundPage,
   QuizPage,
   RegisterPage,
+  StartChoicePage,
   WelcomePage,
 } from '@/pages';
 import { ProtectedRoute } from './ProtectedRoute';
@@ -18,6 +19,15 @@ import { ROUTES } from './routes';
 export const router = createBrowserRouter([
   // первая страница сайта: вступление с кнопкой «Попробовать»
   { path: ROUTES.ROOT, element: <WelcomePage /> },
+  // после регистрации: выбор «быстрый старт» или квиз
+  {
+    path: ROUTES.START,
+    element: (
+      <ProtectedRoute>
+        <StartChoicePage />
+      </ProtectedRoute>
+    ),
+  },
   // тест доступен только после регистрации/входа
   {
     path: ROUTES.QUIZ,
