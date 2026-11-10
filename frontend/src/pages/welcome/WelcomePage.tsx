@@ -22,8 +22,8 @@ function SectionTitle({ children }: { children: ReactNode }) {
 
 const BENEFITS: { text: string; image?: string }[] = [
   { text: 'Узнать тонкости предпринимательства', image: '/assets/lander-s1.svg' },
-  { text: 'Составить свой идеальный бизнес план', image: '/assets/lander-s2.png' },
-  { text: 'Начать купаться в море своих денег' },
+  { text: 'Составить свой идеальный бизнес план', image: '/assets/lander-s2.svg' },
+  { text: 'Начать купаться в море своих денег', image: '/assets/lander-s3.svg' },
 ];
 
 const STEPS = [
