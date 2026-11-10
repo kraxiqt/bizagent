@@ -3,6 +3,7 @@ export const ROUTES = {
   LOGIN: '/login',
   REGISTER: '/register',
   AUTH_CALLBACK: '/auth/callback',
+  START: '/start',
   QUIZ: '/quiz',
   CHAT: '/chat',
 } as const;

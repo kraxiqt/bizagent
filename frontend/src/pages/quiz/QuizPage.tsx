@@ -1,8 +1,13 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { ROUTES } from "@/app/router/routes";
 import { useAuthStore } from "@/features/auth";
-import { quizApi, useGoalStore, type QuizResult } from "@/features/quiz";
+import {
+  quizApi,
+  savePlanSettings,
+  useGoalStore,
+  type QuizResult,
+} from "@/features/quiz";
 import { getErrorMessage } from "@/shared/api/errorHandler";
 import { cn } from "@/shared/lib/cn";
 import { Button, Logo, Textarea } from "@/shared/ui";
@@ -30,11 +35,16 @@ const chipClass = (active: boolean) =>
 
 export function QuizPage() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const userId = useAuthStore((s) => s.user?.id ?? null);
   const total = QUIZ_QUESTIONS.length;
+  // «Быстрый старт» с страницы выбора: вопросы пропускаем, сразу настройки и цель
+  const quick = searchParams.get("mode") === "quick";
+  const flowStart = quick ? total : 0;
+  const flowLength = quick ? 2 : total + 2;
 
   // 0..total-1 — вопросы, total — настройки плана, total+1 — цель
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(flowStart);
   const [answers, setAnswers] = useState<(number | null)[]>(() =>
     Array(total).fill(null),
   );
@@ -49,13 +59,23 @@ export function QuizPage() {
   const isGoal = step === total + 1;
   const question = QUIZ_QUESTIONS[step];
   const selected = isSettings || isGoal ? null : answers[step];
-  const progress = result ? 100 : (step / (total + 2)) * 100;
+  const progress = result ? 100 : ((step - flowStart) / flowLength) * 100;
   const goalReady = goal.trim().length >= GOAL_MIN_LENGTH;
 
   const selectOption = (index: number) =>
     setAnswers((prev) => prev.map((v, i) => (i === step ? index : v)));
 
   const submit = async () => {
+    // быстрый старт: квиз не проходили, плана нет — сохраняем цель и настройки и идём в чат
+    if (quick) {
+      if (userId) {
+        useGoalStore.getState().set(userId, goal.trim());
+        savePlanSettings(userId, { days, hoursPerDay });
+      }
+      navigate(ROUTES.CHAT, { replace: true });
+      return;
+    }
+
     setSubmitting(true);
     setError(undefined);
     try {
@@ -211,8 +231,8 @@ export function QuizPage() {
         <div className="mt-10 flex items-center justify-between gap-4">
           <Button
             variant="secondary"
-            onClick={() => setStep((s) => Math.max(0, s - 1))}
-            disabled={step === 0 || submitting}
+            onClick={() => (step > flowStart ? setStep((s) => s - 1) : navigate(ROUTES.START))}
+            disabled={submitting || (!quick && step === 0)}
             className="min-w-[110px] font-bold uppercase"
           >
             Назад
