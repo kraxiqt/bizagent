@@ -1,6 +1,7 @@
 import os
 import secrets
 import uuid
+from quickstart_plan import router as quickstart_router
 from contextlib import asynccontextmanager
 from datetime import datetime, timedelta, timezone
 from quiz_router import router as quiz_router
@@ -168,3 +169,4 @@ def me(user: UserDB = Depends(get_current_user)):
 app.include_router(auth)
 app.include_router(quiz_router, prefix="/api")
 app.include_router(chat_router)
+app.include_router(quickstart_router)

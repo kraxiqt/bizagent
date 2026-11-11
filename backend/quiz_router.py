@@ -11,6 +11,7 @@ from sqlalchemy.orm import Session
 from database import get_db
 from db_models import QuizResultDB
 from llm import LLMUnavailable, generate_json
+from materials import catalog_prompt_block, enrich_days
 from security import get_current_user
 
 router = APIRouter()
@@ -48,6 +49,10 @@ class PlanDay(BaseModel):
     tasks: list[str]
     result: str
     duration_min: int
+    # теория и материалы Альфа-Курса; необязательные, чтобы старые планы из БД тоже читались
+    theory: str = ""
+    topic_key: str = ""
+    articles: list[dict] = Field(default_factory=list)
 
 
 class Plan(BaseModel):
@@ -100,6 +105,7 @@ def build_prompt(data: SubmitIn, answers: list[AnswerIn], diagnosis: dict) -> st
     qa = "\n".join(qa_lines)
 
     limit = int(data.hours_per_day * 60)
+    theory_len = 300 if data.days > 14 else 500
     return f"""Результаты диагностики:
 Уровень: {diagnosis['level']} ({diagnosis['totalScore']} из {diagnosis['maxScore']})
 Текущий этап: {diagnosis['stage']}
@@ -111,6 +117,8 @@ def build_prompt(data: SubmitIn, answers: list[AnswerIn], diagnosis: dict) -> st
 Ответы пользователя:
 {qa}
 
+{catalog_prompt_block()}
+
 Составь план обучения ровно на {data.days} дней (по одному объекту на каждый день, day от 1 до {data.days}).
 Правила:
 - Начинай с текущего этапа пользователя, не давай то, что он уже прошёл.
@@ -120,22 +128,32 @@ def build_prompt(data: SubmitIn, answers: list[AnswerIn], diagnosis: dict) -> st
 - Сумма duration_min за день не должна превышать {limit} минут.
 - Каждый день содержит практическое задание и проверяемый результат.
 - Формулируй кратко: 2-4 пункта в tasks, одно предложение в result.
+- Для каждого дня добавь "theory": 2-3 предложения общей теории по теме дня простым языком, до {theory_len} символов.
+- "topic_key": ключ темы из каталога, которая ближе всего к теме дня.
+- "article_ids": id материалов из каталога по теме дня: статья и, если в теме есть курс, курс (type course); без повторов между днями.
+- В текстах (theory, tasks, result) никогда не упоминай id материалов, при необходимости пиши «статья дня» или «курс дня».
+- Не называй ставки налогов и суммы по закону, не выдумывай ссылки.
 
 Схема ответа:
 {{
   "summary": "вывод об уровне и о связи плана с целью, 2-3 предложения",
   "days": [
-    {{"day": 1, "topic": "...", "tasks": ["..."], "result": "...", "duration_min": 60}}
+    {{"day": 1, "topic": "...", "topic_key": "demand", "theory": "...", "tasks": ["..."], "result": "...", "duration_min": 60, "article_ids": ["a05", "c03"]}}
   ],
   "tips": ["..."]
 }}"""
 
 
 # ---------- генерация плана ----------
-def generate_plan(prompt: str, days: int) -> Plan:
+def generate_plan(prompt: str, days: int, hours: float) -> Plan:
     for _ in range(2):  # одна повторная попытка при невалидном ответе
         try:
-            plan = Plan.model_validate(generate_json(prompt))
+            raw = generate_json(prompt)
+            # теорию и материалы проверяем и дополняем по каталогу: выдуманные id отбрасываются
+            raw_days = raw.get("days") if isinstance(raw, dict) else None
+            if isinstance(raw_days, list) and all(isinstance(x, dict) for x in raw_days):
+                enrich_days(raw_days, hours)
+            plan = Plan.model_validate(raw)
             if len(plan.days) != days:
                 raise ValueError("Неверное количество дней в плане")
             for i, d in enumerate(plan.days, 1):  # на случай, если модель сбилась с нумерацией
@@ -206,7 +224,7 @@ def submit_quiz(
 
     diagnosis = diagnose(answers)
     diagnosis["goal"] = data.goal  # цель хранится внутри diagnosis (JSON), миграция БД не нужна
-    plan = generate_plan(build_prompt(data, answers, diagnosis), data.days)
+    plan = generate_plan(build_prompt(data, answers, diagnosis), data.days, data.hours_per_day)
 
     # в БД попадает только успешный результат: ответы + диагностика + готовый план
     db.add(

@@ -1,0 +1,429 @@
+{
+  "topics": {
+    "idea": "Поиск бизнес-идеи",
+    "model": "Бизнес-модель",
+    "demand": "Проверка спроса и гипотез",
+    "plan": "Бизнес-план и стратегия",
+    "legal": "Оформление: ИП, ООО, налоги",
+    "finance": "Финансы и бюджет",
+    "marketing": "Клиенты и продвижение",
+    "team": "Команда и управление",
+    "scale": "Рост и масштабирование",
+    "productivity": "Планирование и дисциплина"
+  },
+  "items": [
+    {
+      "id": "a01",
+      "topic": "idea",
+      "type": "article",
+      "title": "Как найти идею для бизнеса: примеры и советы для начинающих",
+      "url": "https://kurs.alfabank.ru/articles/kak-najti-ideyu-dlya-biznesa-i-chto-ehto-takoe/"
+    },
+    {
+      "id": "a02",
+      "topic": "idea",
+      "type": "article",
+      "title": "Методы генерации бизнес-идей",
+      "url": "https://kurs.alfabank.ru/articles/metody-generacii-biznes-idej/"
+    },
+    {
+      "id": "c01",
+      "topic": "idea",
+      "type": "course",
+      "title": "Курс-практикум «Генерируем идеи для бизнеса»",
+      "url": "https://kurs.alfabank.ru/courses/generiruem-idei-dlya-biznesa-kurs-praktikum/"
+    },
+    {
+      "id": "a03",
+      "topic": "idea",
+      "type": "article",
+      "title": "Как превратить хобби в бизнес",
+      "url": "https://kurs.alfabank.ru/articles/mozhet-li-hobbi-prevratitsya-v-pribylnyj-biznes/"
+    },
+    {
+      "id": "a04",
+      "topic": "model",
+      "type": "article",
+      "title": "Как выбрать бизнес-модель",
+      "url": "https://kurs.alfabank.ru/articles/kak-vybrat-biznes-model/"
+    },
+    {
+      "id": "t01",
+      "topic": "model",
+      "type": "term",
+      "title": "Что такое бизнес-модель",
+      "url": "https://kurs.alfabank.ru/vocabulary/biznes-model/"
+    },
+    {
+      "id": "a05",
+      "topic": "demand",
+      "type": "article",
+      "title": "Как узнать спрос на товар: методы и инструменты анализа",
+      "url": "https://kurs.alfabank.ru/articles/kak-uznat-spros-na-tovar/"
+    },
+    {
+      "id": "t02",
+      "topic": "demand",
+      "type": "term",
+      "title": "Что такое CustDev (кастдев)",
+      "url": "https://kurs.alfabank.ru/vocabulary/custdev-kastdev/"
+    },
+    {
+      "id": "a06",
+      "topic": "demand",
+      "type": "article",
+      "title": "Как создать MVP",
+      "url": "https://kurs.alfabank.ru/articles/kak-sozdat-mvp/"
+    },
+    {
+      "id": "t03",
+      "topic": "demand",
+      "type": "term",
+      "title": "Что такое MVP",
+      "url": "https://kurs.alfabank.ru/vocabulary/mvp/"
+    },
+    {
+      "id": "a07",
+      "topic": "demand",
+      "type": "article",
+      "title": "Маркетинговые гипотезы: как формулировать и тестировать",
+      "url": "https://kurs.alfabank.ru/articles/a-chto-esli-kak-testirovat-marketingovye-gipotezy/"
+    },
+    {
+      "id": "t04",
+      "topic": "demand",
+      "type": "term",
+      "title": "Что такое спрос",
+      "url": "https://kurs.alfabank.ru/vocabulary/spros/"
+    },
+    {
+      "id": "a08",
+      "topic": "demand",
+      "type": "article",
+      "title": "Как грамотно выбрать товар для продажи на маркетплейсе",
+      "url": "https://kurs.alfabank.ru/articles/kak-gramotno-vybrat-tovar-dlya-prodazhi-na-marketpleyse/"
+    },
+    {
+      "id": "a09",
+      "topic": "demand",
+      "type": "article",
+      "title": "Стратегии выхода на новый рынок",
+      "url": "https://kurs.alfabank.ru/articles/strategii-vyhoda-na-novyj-rynok/"
+    },
+    {
+      "id": "a10",
+      "topic": "plan",
+      "type": "article",
+      "title": "Как составить бизнес-план: пошаговая инструкция",
+      "url": "https://kurs.alfabank.ru/articles/kak-sostavit-biznes-plan-poshagovaya-instrukciya/"
+    },
+    {
+      "id": "a11",
+      "topic": "plan",
+      "type": "article",
+      "title": "Как составить производственный план",
+      "url": "https://kurs.alfabank.ru/articles/u-samuraya-net-tseli-tolko-plan-sostavlyaem-proizvodstvennyj-plan/"
+    },
+    {
+      "id": "a12",
+      "topic": "plan",
+      "type": "article",
+      "title": "Стратегическое планирование в бизнесе: этапы, методы, виды стратегий",
+      "url": "https://kurs.alfabank.ru/articles/strategicheskoe-planirovanie-v-biznese/"
+    },
+    {
+      "id": "a13",
+      "topic": "legal",
+      "type": "article",
+      "title": "Самозанятый и ИП: в чём разница",
+      "url": "https://kurs.alfabank.ru/articles/chem-ip-otlichaetsya-ot-samozanyatogo/"
+    },
+    {
+      "id": "a14",
+      "topic": "legal",
+      "type": "article",
+      "title": "ИП на НПД: расчёт и сроки уплаты налогов",
+      "url": "https://kurs.alfabank.ru/articles/vesti-biznes-nedorogo-kak-ip-na-npd-rabotayut/"
+    },
+    {
+      "id": "a15",
+      "topic": "legal",
+      "type": "article",
+      "title": "УСН для ИП: налоги, взносы, отчётность и изменения",
+      "url": "https://kurs.alfabank.ru/articles/usn-dlya-ip-nalogi-vznosy-i-otchyotnost/"
+    },
+    {
+      "id": "a16",
+      "topic": "legal",
+      "type": "article",
+      "title": "Виды деятельности для ИП: как выбрать и указать коды ОКВЭД",
+      "url": "https://kurs.alfabank.ru/articles/okvehd-dlya-ip-kak-vybrat-kod-i-ukazat-pri-registracii/"
+    },
+    {
+      "id": "a17",
+      "topic": "legal",
+      "type": "article",
+      "title": "Переход на УСН: как перейти ИП и ООО, условия и сроки",
+      "url": "https://kurs.alfabank.ru/articles/kak-perejti-na-uproshchyonnuyu-sistemu-nalogooblozheniya/"
+    },
+    {
+      "id": "t05",
+      "topic": "legal",
+      "type": "term",
+      "title": "Что такое организационно-правовая форма",
+      "url": "https://kurs.alfabank.ru/vocabulary/organizacionno-pravovaya-forma/"
+    },
+    {
+      "id": "t06",
+      "topic": "legal",
+      "type": "term",
+      "title": "Что такое индивидуальный предприниматель",
+      "url": "https://kurs.alfabank.ru/vocabulary/individualnyj-predprinimatel/"
+    },
+    {
+      "id": "t07",
+      "topic": "legal",
+      "type": "term",
+      "title": "Что такое ООО",
+      "url": "https://kurs.alfabank.ru/vocabulary/ooo/"
+    },
+    {
+      "id": "a18",
+      "topic": "finance",
+      "type": "article",
+      "title": "Анализ финансовых показателей: рентабельность, точка безубыточности, маржинальность",
+      "url": "https://kurs.alfabank.ru/articles/provodim-finansovyj-analiz-predpriyatiya-chtoby-buri-byli-nipochyom/"
+    },
+    {
+      "id": "a19",
+      "topic": "finance",
+      "type": "article",
+      "title": "Как предпринимателю составить и вести платёжный календарь",
+      "url": "https://kurs.alfabank.ru/articles/kak-predprinimatelyu-sostavit-i-vesti-platyozhnyj-kalendar/"
+    },
+    {
+      "id": "a20",
+      "topic": "finance",
+      "type": "article",
+      "title": "Как рассчитать маркетинговый бюджет: методы и статьи расходов",
+      "url": "https://kurs.alfabank.ru/articles/marketingovyj-byudzhet-kak-rasschitat/"
+    },
+    {
+      "id": "t08",
+      "topic": "finance",
+      "type": "term",
+      "title": "Что такое постоянные издержки",
+      "url": "https://kurs.alfabank.ru/vocabulary/postoyannye-izderzhki/"
+    },
+    {
+      "id": "a21",
+      "topic": "finance",
+      "type": "article",
+      "title": "Ищем инвестора: инструкция для предпринимателей",
+      "url": "https://kurs.alfabank.ru/articles/ishchem-investora-instrukciya-dlya-predprinimatelej/"
+    },
+    {
+      "id": "a22",
+      "topic": "marketing",
+      "type": "article",
+      "title": "Как составить маркетинговый план",
+      "url": "https://kurs.alfabank.ru/articles/kak-sostavit-marketingovyj-plan/"
+    },
+    {
+      "id": "a23",
+      "topic": "marketing",
+      "type": "article",
+      "title": "Как создать и управлять клиентской базой",
+      "url": "https://kurs.alfabank.ru/articles/sozdanie-i-upravlenie-klientskoj-bazoj/"
+    },
+    {
+      "id": "a24",
+      "topic": "marketing",
+      "type": "article",
+      "title": "Как продвигать свой бизнес на Авито",
+      "url": "https://kurs.alfabank.ru/articles/kak-prodvigat-svoj-biznes-na-avito/"
+    },
+    {
+      "id": "a25",
+      "topic": "marketing",
+      "type": "article",
+      "title": "Как выйти на B2B-рынок",
+      "url": "https://kurs.alfabank.ru/articles/a-kolya-vyjdet-poshagovaya-instrukciya-po-vyhodu-na-b2b-rynok/"
+    },
+    {
+      "id": "a26",
+      "topic": "marketing",
+      "type": "article",
+      "title": "Реклама без привычных соцсетей: как сохранить клиентов",
+      "url": "https://kurs.alfabank.ru/articles/reklama-bez-privychnyh-socsetej-kak-sohranit-klientov/"
+    },
+    {
+      "id": "a27",
+      "topic": "marketing",
+      "type": "article",
+      "title": "Как оценить эффективность рекламы",
+      "url": "https://kurs.alfabank.ru/articles/kak-otsledit-ehffektivnost-reklamy/"
+    },
+    {
+      "id": "a28",
+      "topic": "marketing",
+      "type": "article",
+      "title": "Каналы продвижения социального бизнеса: онлайн и офлайн-инструменты",
+      "url": "https://kurs.alfabank.ru/articles/ehffektivnye-kanaly-dlya-prodvizheniya-socialnogo-biznesa/"
+    },
+    {
+      "id": "t09",
+      "topic": "marketing",
+      "type": "term",
+      "title": "Что такое маркетинг",
+      "url": "https://kurs.alfabank.ru/vocabulary/marketing/"
+    },
+    {
+      "id": "t10",
+      "topic": "marketing",
+      "type": "term",
+      "title": "Что такое лид",
+      "url": "https://kurs.alfabank.ru/vocabulary/lid/"
+    },
+    {
+      "id": "a29",
+      "topic": "team",
+      "type": "article",
+      "title": "Как привлечь сотрудников: эффективные методы для вашего бизнеса",
+      "url": "https://kurs.alfabank.ru/articles/kak-privlech-sotrudnikov-v-vashu-kompaniyu/"
+    },
+    {
+      "id": "a30",
+      "topic": "team",
+      "type": "article",
+      "title": "Как выйти из операционного управления",
+      "url": "https://kurs.alfabank.ru/articles/kak-vyjti-iz-operacionnogo-upravleniya/"
+    },
+    {
+      "id": "a31",
+      "topic": "team",
+      "type": "article",
+      "title": "Зарплатный проект: как выбрать банк и платить сотрудникам законно",
+      "url": "https://kurs.alfabank.ru/articles/nuzhen-li-vashemu-biznesu-zarplatnyj-proekt/"
+    },
+    {
+      "id": "t11",
+      "topic": "team",
+      "type": "term",
+      "title": "Что такое организационная структура",
+      "url": "https://kurs.alfabank.ru/vocabulary/organizacionnaya-struktura/"
+    },
+    {
+      "id": "a32",
+      "topic": "scale",
+      "type": "article",
+      "title": "Масштабирование бизнеса: признаки, этапы и инструменты",
+      "url": "https://kurs.alfabank.ru/articles/hochu-rasshirit-svoj-biznes-i-ne-progoret/"
+    },
+    {
+      "id": "a33",
+      "topic": "scale",
+      "type": "article",
+      "title": "Кризисы роста компании и как их преодолеть",
+      "url": "https://kurs.alfabank.ru/articles/krizisy-rosta-kompanii-i-kak-ih-preodolet/"
+    },
+    {
+      "id": "a34",
+      "topic": "scale",
+      "type": "article",
+      "title": "Бизнес в кризис: 5 шагов для устойчивости компании",
+      "url": "https://kurs.alfabank.ru/articles/biznes-v-krizis-kak-sohranit-ustojchivost/"
+    },
+    {
+      "id": "t12",
+      "topic": "scale",
+      "type": "term",
+      "title": "Что такое стартап",
+      "url": "https://kurs.alfabank.ru/vocabulary/startap/"
+    },
+    {
+      "id": "c02",
+      "topic": "productivity",
+      "type": "course",
+      "title": "Курс «Личная эффективность: как сбросить балласт и начать действовать»",
+      "url": "https://kurs.alfabank.ru/courses/lichnaya-ehffektivnost-kak-sbrosit-ballast-i-nachat-dejstvovat/"
+    },
+    {
+      "id": "a35",
+      "topic": "productivity",
+      "type": "article",
+      "title": "Матрица Эйзенхауэра: что это и как пользоваться",
+      "url": "https://kurs.alfabank.ru/articles/matrica-ehjzenhauehra-kak-rasstavit-prioritety/"
+    },
+    {
+      "id": "c03",
+      "topic": "plan",
+      "type": "course",
+      "title": "Курс «Запускаем свое дело: первые шаги в бизнесе»",
+      "url": "https://kurs.alfabank.ru/courses/prosto-o-slozhnom/"
+    },
+    {
+      "id": "c04",
+      "topic": "legal",
+      "type": "course",
+      "title": "Курс «Регистрация бизнеса: самозанятость, ИП или ООО»",
+      "url": "https://kurs.alfabank.ru/courses/registratsiya-biznesa/"
+    },
+    {
+      "id": "c05",
+      "topic": "scale",
+      "type": "course",
+      "title": "Курс «Кейсы предпринимателей: как справиться с вызовами»",
+      "url": "https://kurs.alfabank.ru/courses/keysy-predprinimateley-kak-spravitsya-s-vyzovami-v-biznese/"
+    },
+    {
+      "id": "c06",
+      "topic": "model",
+      "type": "course",
+      "title": "Курс «Как запустить бизнес по франшизе»",
+      "url": "https://kurs.alfabank.ru/courses/kak-otkryt-biznes-po-franshize/"
+    },
+    {
+      "id": "c07",
+      "topic": "marketing",
+      "type": "course",
+      "title": "Курс по маркетплейсам: с чего начать и как преуспеть",
+      "url": "https://kurs.alfabank.ru/courses/marketpleysy-s-chego-nachat-kak-preuspet/"
+    },
+    {
+      "id": "c08",
+      "topic": "finance",
+      "type": "course",
+      "title": "Курс «Где взять деньги на бизнес»",
+      "url": "https://kurs.alfabank.ru/courses/gde-vzyat-dengi-na-biznes/"
+    },
+    {
+      "id": "c09",
+      "topic": "marketing",
+      "type": "course",
+      "title": "Курс «Продвижение бизнеса: маркетинговые инструменты для роста продаж»",
+      "url": "https://kurs.alfabank.ru/courses/prodvizhenie-biznesa-marketingovye-instrumenty-dlya-rosta-prodazh/"
+    },
+    {
+      "id": "c10",
+      "topic": "team",
+      "type": "course",
+      "title": "Курс «Управление командой»",
+      "url": "https://kurs.alfabank.ru/courses/kak-upravlyat-komandoi/"
+    },
+    {
+      "id": "c11",
+      "topic": "team",
+      "type": "course",
+      "title": "Курс «Подбор и адаптация сотрудников»",
+      "url": "https://kurs.alfabank.ru/courses/podbor-i-adaptaciya-sotrudnikov/"
+    },
+    {
+      "id": "a36",
+      "topic": "legal",
+      "type": "article",
+      "title": "Какие налоги и взносы платят ИП",
+      "url": "https://kurs.alfabank.ru/articles/nalogi-i-vznosy-ip-polnyj-illyustrirovannyj-gajd/"
+    }
+  ]
+}

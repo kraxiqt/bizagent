@@ -39,11 +39,16 @@ export function PlanPanel({ width }: PlanPanelProps) {
   const planKey = useMemo(() => (plan ? planKeyOf(plan) : ""), [plan]);
   const allDays = useMemo(() => plan?.days.map((d) => d.day) ?? [], [plan]);
   const doneDays = data.completed[planKey] ?? [];
+  // план, созданный через «Быстрый старт», а не через тест
+  const isQuickstart = result?.diagnosis.mode === "quickstart";
 
   const completeDay = (day: number) => {
     useStreakStore.getState().complete(planKey, day, today);
     // сразу после отметки смотрим, какая получилась серия
-    const { current } = getStreakStatus(useStreakStore.getState().data.dates, today);
+    const { current } = getStreakStatus(
+      useStreakStore.getState().data.dates,
+      today,
+    );
     success(
       `Огонёк за сегодня! Серия: ${current} ${pluralDays(current)}`,
       `День ${day} выполнен. Возвращайтесь завтра, чтобы поддержать серию.`,
@@ -52,7 +57,9 @@ export function PlanPanel({ width }: PlanPanelProps) {
 
   return (
     <aside
-      style={width ? ({ "--plan-w": `${width}px` } as CSSProperties) : undefined}
+      style={
+        width ? ({ "--plan-w": `${width}px` } as CSSProperties) : undefined
+      }
       className="scrollbar-brand hidden w-80 shrink-0 flex-col overflow-y-auto border-l-2 border-black p-4 lg:flex lg:w-[var(--plan-w,20rem)] dark:border-ink-700"
     >
       <h2 className="mb-3 font-display text-lg font-bold uppercase tracking-wide">
@@ -81,7 +88,9 @@ export function PlanPanel({ width }: PlanPanelProps) {
       {result && (
         <>
           <p className="mb-1 text-xs opacity-70">
-            Уровень: {result.diagnosis.level}
+            {isQuickstart
+              ? "Быстрый старт"
+              : `Уровень: ${result.diagnosis.level}`}
           </p>
           <p className="mb-2 text-sm">{result.plan.summary}</p>
           <p className="mb-4 text-xs opacity-70">
@@ -90,7 +99,13 @@ export function PlanPanel({ width }: PlanPanelProps) {
           <ol className="flex flex-col gap-2">
             {result.plan.days.map((d) => {
               const isDone = doneDays.includes(d.day);
-              const block = getCompleteBlock(data, planKey, d.day, allDays, today);
+              const block = getCompleteBlock(
+                data,
+                planKey,
+                d.day,
+                allDays,
+                today,
+              );
               return (
                 <li key={d.day}>
                   <details className="rounded-[4px] border-2 border-black p-2 dark:border-ink-600">
@@ -99,7 +114,20 @@ export function PlanPanel({ width }: PlanPanelProps) {
                       День {d.day}: {d.topic}
                       {isDone && <span className="sr-only"> (выполнен)</span>}
                     </summary>
-                    <ul className="mt-2 list-disc pl-5 text-xs">
+
+                    {d.theory && (
+                      <>
+                        <p className="mt-2 text-xs font-bold uppercase opacity-70">
+                          Теория
+                        </p>
+                        <p className="text-xs">{d.theory}</p>
+                      </>
+                    )}
+
+                    <p className="mt-2 text-xs font-bold uppercase opacity-70">
+                      Задания
+                    </p>
+                    <ul className="list-disc pl-5 text-xs">
                       {d.tasks.map((t) => (
                         <li key={t}>{t}</li>
                       ))}
@@ -107,6 +135,28 @@ export function PlanPanel({ width }: PlanPanelProps) {
                     <p className="mt-2 text-xs opacity-70">
                       Результат: {d.result}
                     </p>
+
+                    {d.articles && d.articles.length > 0 && (
+                      <>
+                        <p className="mt-2 text-xs font-bold uppercase opacity-70">
+                          Читать и смотреть
+                        </p>
+                        <ul className="list-disc pl-5 text-xs">
+                          {d.articles.map((a) => (
+                            <li key={a.id}>
+                              <a
+                                href={a.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-brand-600 underline"
+                              >
+                                {a.title}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
 
                     {isDone ? (
                       <p className="mt-3 font-display text-sm font-bold text-brand-600">
