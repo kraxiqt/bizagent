@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="feat(src): перемещен стрик и цель на левой панели" />
+    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="feat(): убраны старые файлы" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="frontend" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,61 +39,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0559651699460744" />
-      <entry key="MS500" value="2.0282467393708763" />
-      <entry key="S2" value="4.047939523973723" />
-      <entry key="S5" value="6.206409222929757" />
-      <entry key="S10" value="9.30120478406792" />
-      <entry key="S30" value="18.39061779717301" />
-      <entry key="S60" value="26.22425902467635" />
-      <entry key="M2" value="35.05409291941453" />
-      <entry key="M5" value="47.13411068567873" />
-      <entry key="M10" value="56.73713368288396" />
-      <entry key="M15" value="62.984262006219666" />
-      <entry key="M30" value="73.32464860817346" />
-      <entry key="H1" value="81.21141630796161" />
-      <entry key="H2" value="86.17309275286932" />
-      <entry key="H4" value="88.96810881909181" />
-      <entry key="D1" value="91.47727865348043" />
-      <entry key="W1" value="91.9248861684113" />
+      <entry key="MS100" value="1.005346672249756" />
+      <entry key="MS500" value="1.5887375955475571" />
+      <entry key="S2" value="3.4809543587469967" />
+      <entry key="S5" value="6.1230673954065695" />
+      <entry key="S10" value="9.22683110607204" />
+      <entry key="S30" value="13.981979260262147" />
+      <entry key="S60" value="16.916618140442047" />
+      <entry key="M2" value="21.404961766121357" />
+      <entry key="M5" value="31.79252540834266" />
+      <entry key="M10" value="51.73808518037004" />
+      <entry key="M15" value="71.29532181682362" />
+      <entry key="M30" value="112.34965859119275" />
+      <entry key="H1" value="150.01946425162345" />
+      <entry key="H2" value="176.4013257909521" />
+      <entry key="H4" value="192.16559408731777" />
+      <entry key="D1" value="206.87071612292098" />
+      <entry key="W1" value="209.54893212987878" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.9042982520761106E-205" />
-      <entry key="S2" value="6.605926575060457E-52" />
-      <entry key="S5" value="3.3726681588684684E-21" />
-      <entry key="S10" value="5.810463501219791E-11" />
-      <entry key="S30" value="4.1831405016016094E-4" />
-      <entry key="S60" value="0.02525198724982518" />
-      <entry key="M2" value="0.21541871002793428" />
-      <entry key="M5" value="0.9803528837875432" />
-      <entry key="M10" value="2.5924078637455574" />
-      <entry key="M15" value="4.1337041309926095" />
-      <entry key="M30" value="7.100571126306704" />
-      <entry key="H1" value="9.53951579104579" />
-      <entry key="H2" value="11.117591926783502" />
-      <entry key="H4" value="12.017167509151271" />
-      <entry key="D1" value="12.830080015464079" />
-      <entry key="W1" value="12.975571425903276" />
+      <entry key="MS500" value="6.600523404896715E-131" />
+      <entry key="S2" value="2.8643658098158996E-33" />
+      <entry key="S5" value="1.0738428758074414E-13" />
+      <entry key="S10" value="4.167480989622319E-7" />
+      <entry key="S30" value="0.01151368437393515" />
+      <entry key="S60" value="0.15115924566308214" />
+      <entry key="M2" value="0.5493021423334535" />
+      <entry key="M5" value="1.205882643208788" />
+      <entry key="M10" value="1.839673246181554" />
+      <entry key="M15" value="2.6536897346543267" />
+      <entry key="M30" value="5.356143159132783" />
+      <entry key="H1" value="8.86429657724951" />
+      <entry key="H2" value="11.79642060625671" />
+      <entry key="H4" value="13.708198251028435" />
+      <entry key="D1" value="15.588491398363898" />
+      <entry key="W1" value="15.940444492217908" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.011481690752335" />
-      <entry key="MS500" value="2.0063078044932077" />
-      <entry key="S2" value="4.036070381143519" />
-      <entry key="S5" value="6.198920667418493" />
-      <entry key="S10" value="9.295461704249716" />
-      <entry key="S30" value="18.38686636306458" />
-      <entry key="S60" value="26.24560162525377" />
-      <entry key="M2" value="35.264596754180914" />
-      <entry key="M5" value="48.10882987013285" />
-      <entry key="M10" value="59.32323934438083" />
-      <entry key="M15" value="67.11156836668513" />
-      <entry key="M30" value="80.41990587076482" />
-      <entry key="H1" value="90.74740402674776" />
-      <entry key="H2" value="97.28863839080995" />
-      <entry key="H4" value="100.98417266683552" />
-      <entry key="D1" value="104.30716259197582" />
-      <entry key="W1" value="104.90042927300041" />
+      <entry key="MS100" value="0.9381264346850121" />
+      <entry key="MS500" value="1.5692856459655735" />
+      <entry key="S2" value="3.4715589569170233" />
+      <entry key="S5" value="6.116769614982177" />
+      <entry key="S10" value="9.222155292001771" />
+      <entry key="S30" value="13.989834748214202" />
+      <entry key="S60" value="17.057657162340636" />
+      <entry key="M2" value="21.93748163007805" />
+      <entry key="M5" value="32.98369077318678" />
+      <entry key="M10" value="53.567002893496806" />
+      <entry key="M15" value="73.93988294652138" />
+      <entry key="M30" value="117.69871490258393" />
+      <entry key="H1" value="158.87875724863522" />
+      <entry key="H2" value="188.19465850789695" />
+      <entry key="H4" value="205.87206042654063" />
+      <entry key="D1" value="222.45888833150434" />
+      <entry key="W1" value="225.4893302105229" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -108,25 +108,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "frontend",
-    "last_opened_file_path": "/home/ann-legkaya/PycharmProjects/bizagent/frontend/src/pages/quiz",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
-    "ts.external.directory.path": "/home/ann-legkaya/PycharmProjects/bizagent/frontend/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ann-legkaya/PycharmProjects/bizagent/frontend/src/pages/quiz&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/ann-legkaya/PycharmProjects/bizagent/frontend/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/pages/quiz" />
@@ -299,7 +299,39 @@
       <option name="project" value="LOCAL" />
       <updated>1794038546100</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="feat(src): код страницы выбора пути">
+      <option name="closed" value="true" />
+      <created>1794325209455</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1794325209455</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat(src): привязка страницы-выбора">
+      <option name="closed" value="true" />
+      <created>1794325236445</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1794325236445</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat(src): замена текста на главной старанице">
+      <option name="closed" value="true" />
+      <created>1794399181864</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1794399181864</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat(): убраны старые файлы">
+      <option name="closed" value="true" />
+      <created>1794402132776</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1794402132776</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +348,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/frontend" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -348,6 +380,10 @@
     <MESSAGE value="feat(src): все доп.файлы для правок" />
     <MESSAGE value="feat(src): замена .md на сообщение и скролл внутри ввода" />
     <MESSAGE value="feat(src): перемещен стрик и цель на левой панели" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(src): перемещен стрик и цель на левой панели" />
+    <MESSAGE value="feat(src): код страницы выбора пути" />
+    <MESSAGE value="feat(src): привязка страницы-выбора" />
+    <MESSAGE value="feat(src): замена текста на главной старанице" />
+    <MESSAGE value="feat(): убраны старые файлы" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(): убраны старые файлы" />
   </component>
 </project>

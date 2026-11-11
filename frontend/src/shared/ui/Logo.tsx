@@ -14,8 +14,14 @@ const sizes: Record<LogoSize, string> = {
   lg: 'text-3xl sm:text-[34px]',
 };
 
-// Название сверху: первое слово обычным регистром, остальное — заглавными (как на макете).
-// Текст берётся из VITE_APP_NAME.
+// Название из одного слова («Verity») крупнее: оно занимает одну строку вместо двух.
+const singleWordSizes: Record<LogoSize, string> = {
+  sm: 'text-2xl',
+  lg: 'text-5xl sm:text-6xl',
+};
+
+// Название сверху: первое слово обычным регистром, остальные слова (если есть) — заглавными второй строкой.
+// Текст берётся из env.APP_NAME.
 export function Logo({ size = 'lg', align = 'center', className }: LogoProps) {
   const [first, ...rest] = env.APP_NAME.trim().split(/\s+/);
   const second = rest.join(' ');
@@ -24,7 +30,7 @@ export function Logo({ size = 'lg', align = 'center', className }: LogoProps) {
     <span
       className={cn(
         'inline-block font-display font-bold leading-tight text-[#0015ff]',
-        sizes[size],
+        second ? sizes[size] : cn(singleWordSizes[size], 'tracking-tight'),
         align === 'center' ? 'text-center' : 'text-left',
         className,
       )}

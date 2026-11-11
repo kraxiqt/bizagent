@@ -11,6 +11,8 @@ import {
 import { getErrorMessage } from "@/shared/api/errorHandler";
 import { cn } from "@/shared/lib/cn";
 import { Button, Logo, Textarea } from "@/shared/ui";
+import { InterestList } from "./InterestList";
+import { getInterestProfile } from "./interests";
 import { QUIZ_QUESTIONS } from "./quizData";
 import { PlanView } from "./PlanView";
 
@@ -61,6 +63,8 @@ export function QuizPage() {
   const selected = isSettings || isGoal ? null : answers[step];
   const progress = result ? 100 : ((step - flowStart) / flowLength) * 100;
   const goalReady = goal.trim().length >= GOAL_MIN_LENGTH;
+  // направления из каталога «Альфа-Курса», которые пользователь выбирал чаще всего
+  const interests = getInterestProfile(QUIZ_QUESTIONS, answers);
 
   const selectOption = (index: number) =>
     setAnswers((prev) => prev.map((v, i) => (i === step ? index : v)));
@@ -107,6 +111,7 @@ export function QuizPage() {
           <Logo size="lg" />
         </div>
         <div className="mx-auto w-full max-w-2xl">
+          <InterestList interests={interests} />
           <PlanView result={result} />
           <Button
             size="lg"
