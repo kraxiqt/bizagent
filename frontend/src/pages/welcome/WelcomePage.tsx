@@ -21,15 +21,15 @@ function SectionTitle({ children }: { children: ReactNode }) {
 
 
 const BENEFITS: { text: string; image?: string }[] = [
-  { text: 'Узнать тонкости предпринимательства', image: '/assets/lander-s1.svg' },
-  { text: 'Составить свой идеальный бизнес план', image: '/assets/lander-s2.png' },
-  { text: 'Начать купаться в море своих денег' },
+  { text: 'Получать знания, применяя их на практике', image: '/assets/lander-s1.svg' },
+  { text: 'Составить свой идеальный план обучения', image: '/assets/lander-s2.png' },
+  { text: 'Получать реальный профит от своих усилий' },
 ];
 
 const STEPS = [
   { title: 'Зарегистрируйтесь', text: 'Это займёт меньше минуты' },
-  { title: `Ответьте на ${QUIZ_QUESTIONS.length} вопросов`, text: 'Мы поймём ваш уровень и цели' },
-  { title: 'Начните обучение', text: 'Это будет ваш путь к успеху' },
+  { title: `Ответьте на ${QUIZ_QUESTIONS.length} вопросов или выберите "быстрый старт"`, text: 'Мы поймём ваши интересы и цели' },
+  { title: 'Начните обучение', text: 'Это фундамент вашего пути к успеху' },
 ];
 
 // Стартовая страница: шапка, вступление с кнопкой «Попробовать», «Вам предстоит», «Как это работает?», синий призыв внизу.
@@ -61,10 +61,10 @@ export function WelcomePage() {
             <h1 className="font-display text-5xl font-medium leading-tight md:text-6xl">
               Обучение под
               <br />
-              <span className="text-shadow-blue text-6xl font-bold md:text-7xl">ВАШ</span> бизнес
+              <span className="text-shadow-blue text-6xl font-bold md:text-7xl">ВАШИ</span> стандарты
             </h1>
             <p className="mt-3 max-w-xs font-sans text-2xl font-light leading-snug">
-              ИИ-наставник сделает из вас бизнес гения
+              ИИ-наставник поможет вам составить персональныю программу по "Альфа-курсам" и разобраться с любыми вопрсоами
             </p>
             <button
               type="button"
