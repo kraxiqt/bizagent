@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="feat(src): перемещен стрик и цель на левой панели" />
+    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="feat(src): привязка страницы-выбора">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,61 +42,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0559651699460744" />
-      <entry key="MS500" value="2.0282467393708763" />
-      <entry key="S2" value="4.047939523973723" />
-      <entry key="S5" value="6.206409222929757" />
-      <entry key="S10" value="9.30120478406792" />
-      <entry key="S30" value="18.39061779717301" />
-      <entry key="S60" value="26.22425902467635" />
-      <entry key="M2" value="35.05409291941453" />
-      <entry key="M5" value="47.13411068567873" />
-      <entry key="M10" value="56.73713368288396" />
-      <entry key="M15" value="62.984262006219666" />
-      <entry key="M30" value="73.32464860817346" />
-      <entry key="H1" value="81.21141630796161" />
-      <entry key="H2" value="86.17309275286932" />
-      <entry key="H4" value="88.96810881909181" />
-      <entry key="D1" value="91.47727865348043" />
-      <entry key="W1" value="91.9248861684113" />
+      <entry key="MS100" value="1.0010765290355461" />
+      <entry key="MS500" value="1.334887153157949" />
+      <entry key="S2" value="3.246635953161806" />
+      <entry key="S5" value="5.299239771488484" />
+      <entry key="S10" value="7.236658228848636" />
+      <entry key="S30" value="12.593362729319479" />
+      <entry key="S60" value="17.252595627515326" />
+      <entry key="M2" value="22.965795313657736" />
+      <entry key="M5" value="40.083309673644074" />
+      <entry key="M10" value="65.18048634491413" />
+      <entry key="M15" value="82.43649839086892" />
+      <entry key="M30" value="110.44481343592732" />
+      <entry key="H1" value="131.65871756343466" />
+      <entry key="H2" value="145.08281089772737" />
+      <entry key="H4" value="152.6941556346736" />
+      <entry key="D1" value="159.56405371559623" />
+      <entry key="W1" value="160.79355283256072" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.9042982520761106E-205" />
-      <entry key="S2" value="6.605926575060457E-52" />
-      <entry key="S5" value="3.3726681588684684E-21" />
-      <entry key="S10" value="5.810463501219791E-11" />
-      <entry key="S30" value="4.1831405016016094E-4" />
-      <entry key="S60" value="0.02525198724982518" />
-      <entry key="M2" value="0.21541871002793428" />
-      <entry key="M5" value="0.9803528837875432" />
-      <entry key="M10" value="2.5924078637455574" />
-      <entry key="M15" value="4.1337041309926095" />
-      <entry key="M30" value="7.100571126306704" />
-      <entry key="H1" value="9.53951579104579" />
-      <entry key="H2" value="11.117591926783502" />
-      <entry key="H4" value="12.017167509151271" />
-      <entry key="D1" value="12.830080015464079" />
-      <entry key="W1" value="12.975571425903276" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="5.1012873876322814E-141" />
+      <entry key="S5" value="7.639622802244255E-57" />
+      <entry key="S10" value="8.740493580355118E-29" />
+      <entry key="S30" value="4.4395212611028846E-10" />
+      <entry key="S60" value="2.156169205625895E-5" />
+      <entry key="M2" value="0.0055438956578205585" />
+      <entry key="M5" value="0.2282465043827229" />
+      <entry key="M10" value="1.2176180989893826" />
+      <entry key="M15" value="2.4946396248277893" />
+      <entry key="M30" value="5.645861257870026" />
+      <entry key="H1" value="8.798591384796614" />
+      <entry key="H2" value="11.071574091187012" />
+      <entry key="H4" value="12.442632655440445" />
+      <entry key="D1" value="13.726418204175507" />
+      <entry key="W1" value="13.960558438191661" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.011481690752335" />
-      <entry key="MS500" value="2.0063078044932077" />
-      <entry key="S2" value="4.036070381143519" />
-      <entry key="S5" value="6.198920667418493" />
-      <entry key="S10" value="9.295461704249716" />
-      <entry key="S30" value="18.38686636306458" />
-      <entry key="S60" value="26.24560162525377" />
-      <entry key="M2" value="35.264596754180914" />
-      <entry key="M5" value="48.10882987013285" />
-      <entry key="M10" value="59.32323934438083" />
-      <entry key="M15" value="67.11156836668513" />
-      <entry key="M30" value="80.41990587076482" />
-      <entry key="H1" value="90.74740402674776" />
-      <entry key="H2" value="97.28863839080995" />
-      <entry key="H4" value="100.98417266683552" />
-      <entry key="D1" value="104.30716259197582" />
-      <entry key="W1" value="104.90042927300041" />
+      <entry key="MS100" value="0.753427969116193" />
+      <entry key="MS500" value="1.259609218540021" />
+      <entry key="S2" value="3.193138884389416" />
+      <entry key="S5" value="5.2615824919238685" />
+      <entry key="S10" value="7.2106165256481285" />
+      <entry key="S30" value="12.578474853175107" />
+      <entry key="S60" value="17.24222460187715" />
+      <entry key="M2" value="22.963764479938465" />
+      <entry key="M5" value="40.30559096400481" />
+      <entry key="M10" value="66.3921914243286" />
+      <entry key="M15" value="84.92511533891503" />
+      <entry key="M30" value="116.08525736987599" />
+      <entry key="H1" value="140.45342838080992" />
+      <entry key="H2" value="156.1520259874678" />
+      <entry key="H4" value="165.1354829442303" />
+      <entry key="D1" value="173.29023475942532" />
+      <entry key="W1" value="174.75407688041935" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -299,7 +302,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794038546100</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="feat(src): код страницы выбора пути">
+      <option name="closed" value="true" />
+      <created>1794325209455</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1794325209455</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat(src): привязка страницы-выбора">
+      <option name="closed" value="true" />
+      <created>1794325236445</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1794325236445</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +335,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/frontend" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -348,6 +367,8 @@
     <MESSAGE value="feat(src): все доп.файлы для правок" />
     <MESSAGE value="feat(src): замена .md на сообщение и скролл внутри ввода" />
     <MESSAGE value="feat(src): перемещен стрик и цель на левой панели" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(src): перемещен стрик и цель на левой панели" />
+    <MESSAGE value="feat(src): код страницы выбора пути" />
+    <MESSAGE value="feat(src): привязка страницы-выбора" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(src): привязка страницы-выбора" />
   </component>
 </project>
