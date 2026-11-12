@@ -32,7 +32,7 @@ const STEPS = [
   { title: 'Начните обучение', text: 'Это фундамент вашего пути к успеху' },
 ];
 
-// Стартовая страница: шапка, вступление с кнопкой «Попробовать», «Вам предстоит», «Как это работает?», синий призыв внизу.
+// Стартовая страница: шапка, вступление с кнопкой «Попробовать», «Вам предстоит», «Как это работает?», красный призыв внизу.
 export function WelcomePage() {
   const navigate = useNavigate();
   const start = () => navigate(ROUTES.REGISTER);
@@ -61,7 +61,7 @@ export function WelcomePage() {
             <h1 className="font-display text-5xl font-medium leading-tight md:text-6xl">
               Обучение под
               <br />
-              <span className="text-shadow-blue text-6xl font-bold md:text-7xl">ВАШИ</span> стандарты
+              <span className="text-shadow-brand text-6xl font-bold md:text-7xl">ВАШИ</span> стандарты
             </h1>
             <p className="mt-3 max-w-xs font-sans text-2xl font-light leading-snug">
               ИИ-наставник поможет вам составить персональныю программу по "Альфа-курсам" и разобраться с любыми вопрсоами
@@ -109,7 +109,7 @@ export function WelcomePage() {
         <button
           type="button"
           onClick={start}
-          className="text-shadow-blue mt-3 rounded-xl bg-white px-12 py-2 font-display text-4xl font-medium text-black transition-colors hover:bg-brand-50"
+          className="text-shadow-brand mt-3 rounded-xl bg-white px-12 py-2 font-display text-4xl font-medium text-black transition-colors hover:bg-brand-50"
         >
           Попробовать
         </button>

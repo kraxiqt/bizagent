@@ -13,7 +13,7 @@ export const fieldClasses =
   'dark:bg-ink-900 dark:text-ink-100 dark:placeholder:text-ink-500 ' +
   'disabled:cursor-not-allowed disabled:opacity-60';
 
-// Поле для синей карточки входа/регистрации: тёмно-синяя заливка, белые подписи.
+// Поле для красной карточки входа/регистрации: тёмная заливка, белые подписи.
 export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   { label, error, hint, id, className, ...props },
   ref,

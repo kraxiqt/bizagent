@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="feat(): убраны старые файлы" />
+    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="feat(): мелкие правки">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/layouts/AuthLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layouts/AuthLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/chat/PlanPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/chat/PlanPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/QuizPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/QuizPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/shared/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Toast.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Toast.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="frontend" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,61 +52,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.005346672249756" />
-      <entry key="MS500" value="1.5887375955475571" />
-      <entry key="S2" value="3.4809543587469967" />
-      <entry key="S5" value="6.1230673954065695" />
-      <entry key="S10" value="9.22683110607204" />
-      <entry key="S30" value="13.981979260262147" />
-      <entry key="S60" value="16.916618140442047" />
-      <entry key="M2" value="21.404961766121357" />
-      <entry key="M5" value="31.79252540834266" />
-      <entry key="M10" value="51.73808518037004" />
-      <entry key="M15" value="71.29532181682362" />
-      <entry key="M30" value="112.34965859119275" />
-      <entry key="H1" value="150.01946425162345" />
-      <entry key="H2" value="176.4013257909521" />
-      <entry key="H4" value="192.16559408731777" />
-      <entry key="D1" value="206.87071612292098" />
-      <entry key="W1" value="209.54893212987878" />
+      <entry key="MS100" value="1.0109670845383771" />
+      <entry key="MS500" value="2.100269570155029" />
+      <entry key="S2" value="4.872197011429389" />
+      <entry key="S5" value="8.08299419420133" />
+      <entry key="S10" value="12.496936308035348" />
+      <entry key="S30" value="20.643589621718746" />
+      <entry key="S60" value="25.244638248148316" />
+      <entry key="M2" value="30.737065902629574" />
+      <entry key="M5" value="41.839205934927726" />
+      <entry key="M10" value="61.9942127519121" />
+      <entry key="M15" value="81.62529056243831" />
+      <entry key="M30" value="122.83188922103068" />
+      <entry key="H1" value="160.67669505430763" />
+      <entry key="H2" value="187.2005561652879" />
+      <entry key="H4" value="203.05642798586194" />
+      <entry key="D1" value="217.85115636119372" />
+      <entry key="W1" value="220.5461023497844" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="6.600523404896715E-131" />
-      <entry key="S2" value="2.8643658098158996E-33" />
-      <entry key="S5" value="1.0738428758074414E-13" />
-      <entry key="S10" value="4.167480989622319E-7" />
-      <entry key="S30" value="0.01151368437393515" />
-      <entry key="S60" value="0.15115924566308214" />
-      <entry key="M2" value="0.5493021423334535" />
-      <entry key="M5" value="1.205882643208788" />
-      <entry key="M10" value="1.839673246181554" />
-      <entry key="M15" value="2.6536897346543267" />
-      <entry key="M30" value="5.356143159132783" />
-      <entry key="H1" value="8.86429657724951" />
-      <entry key="H2" value="11.79642060625671" />
-      <entry key="H4" value="13.708198251028435" />
-      <entry key="D1" value="15.588491398363898" />
-      <entry key="W1" value="15.940444492217908" />
+      <entry key="MS100" value="4.533074879772872E-21" />
+      <entry key="MS500" value="8.536475114370494E-5" />
+      <entry key="S2" value="0.09612130195439181" />
+      <entry key="S5" value="0.39185722430664915" />
+      <entry key="S10" value="0.6259851905503907" />
+      <entry key="S30" value="0.8642560715903003" />
+      <entry key="S60" value="1.0571927665058964" />
+      <entry key="M2" value="1.4755999288517399" />
+      <entry key="M5" value="2.158664666541478" />
+      <entry key="M10" value="2.8075356899212522" />
+      <entry key="M15" value="3.6250198512331355" />
+      <entry key="M30" value="6.329797158397023" />
+      <entry key="H1" value="9.8433240263638" />
+      <entry key="H2" value="12.782673271639123" />
+      <entry key="H4" value="14.700261143971709" />
+      <entry key="D1" value="16.58699419168058" />
+      <entry key="W1" value="16.94022594278972" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9381264346850121" />
-      <entry key="MS500" value="1.5692856459655735" />
-      <entry key="S2" value="3.4715589569170233" />
-      <entry key="S5" value="6.116769614982177" />
-      <entry key="S10" value="9.222155292001771" />
-      <entry key="S30" value="13.989834748214202" />
-      <entry key="S60" value="17.057657162340636" />
-      <entry key="M2" value="21.93748163007805" />
-      <entry key="M5" value="32.98369077318678" />
-      <entry key="M10" value="53.567002893496806" />
-      <entry key="M15" value="73.93988294652138" />
-      <entry key="M30" value="117.69871490258393" />
-      <entry key="H1" value="158.87875724863522" />
-      <entry key="H2" value="188.19465850789695" />
-      <entry key="H4" value="205.87206042654063" />
-      <entry key="D1" value="222.45888833150434" />
-      <entry key="W1" value="225.4893302105229" />
+      <entry key="MS100" value="0.09467189840796585" />
+      <entry key="MS500" value="1.697234142776879" />
+      <entry key="S2" value="4.790851097665988" />
+      <entry key="S5" value="8.317761282309448" />
+      <entry key="S10" value="13.005381139012016" />
+      <entry key="S30" value="21.453518475968266" />
+      <entry key="S60" value="26.265172314244946" />
+      <entry key="M2" value="32.18251902131905" />
+      <entry key="M5" value="43.97762594721484" />
+      <entry key="M10" value="64.78815497898698" />
+      <entry key="M15" value="85.23927051359932" />
+      <entry key="M30" value="129.15363233439868" />
+      <entry key="H1" value="170.5145266476573" />
+      <entry key="H2" value="199.9798948351661" />
+      <entry key="H4" value="217.75483306874852" />
+      <entry key="D1" value="234.43781053517276" />
+      <entry key="W1" value="237.4862789018378" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -114,7 +127,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/ann-legkaya/PycharmProjects/bizagent/frontend/src/pages/quiz&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,

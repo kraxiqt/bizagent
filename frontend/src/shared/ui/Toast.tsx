@@ -10,7 +10,7 @@ export interface ToastData {
 }
 
 const variantStyles: Record<ToastVariant, string> = {
-  success: 'border-l-brand-600',
+  success: 'border-l-green-600',
   error: 'border-l-red-600',
   info: 'border-l-ink-500',
 };

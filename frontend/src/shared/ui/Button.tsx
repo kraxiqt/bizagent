@@ -6,14 +6,14 @@ export type ButtonVariant = 'primary' | 'secondary' | 'inverted' | 'ghost' | 'da
 export type ButtonSize = 'sm' | 'md' | 'lg';
 
 export const buttonVariants: Record<ButtonVariant, string> = {
-  // синяя кнопка с тёмной кромкой снизу («Далее», «Попробовать»)
+  // красная кнопка с тёмной кромкой снизу («Далее», «Попробовать»)
   primary:
     'border-2 border-brand-950 bg-brand-600 text-white shadow-inset-hard hover:bg-brand-700',
   // белая с серой рамкой («Назад», «Новый диалог»)
   secondary:
     'border-2 border-[#666] bg-white text-ink-950 hover:bg-ink-100 dark:border-ink-600 dark:bg-ink-900 dark:text-ink-100 dark:hover:bg-ink-800',
-  // белая кнопка на синей карточке (вход / регистрация)
-  inverted: 'bg-white text-brand-600 text-shadow-navy hover:bg-brand-50',
+  // белая кнопка на красной карточке (вход / регистрация)
+  inverted: 'bg-white text-brand-600 text-shadow-dark hover:bg-brand-50',
   ghost:
     'text-ink-800 hover:bg-brand-50 dark:text-ink-300 dark:hover:bg-ink-800',
   danger:

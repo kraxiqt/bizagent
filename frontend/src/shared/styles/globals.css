@@ -41,10 +41,10 @@
     height: 0;
   }
   *::-webkit-scrollbar-track {
-    background: #eef0ff;
+    background: #fff1f0;
   }
   *::-webkit-scrollbar-thumb {
-    background: #0015ff;
+    background: #ef3124;
   }
   .dark *::-webkit-scrollbar-track {
     background: #1c1917;
@@ -54,10 +54,10 @@
   @supports (-moz-appearance: none) {
     * {
       scrollbar-width: thin;
-      scrollbar-color: #0015ff #eef0ff;
+      scrollbar-color: #ef3124 #fff1f0;
     }
     .dark * {
-      scrollbar-color: #0015ff #1c1917;
+      scrollbar-color: #ef3124 #1c1917;
     }
   }
 
@@ -87,7 +87,7 @@
   .auth-input:-webkit-autofill {
     -webkit-text-fill-color: #fff;
     caret-color: #fff;
-    box-shadow: 0 0 0 1000px #000756 inset;
+    box-shadow: 0 0 0 1000px #3d0c08 inset;
   }
 }
 
@@ -98,13 +98,13 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
-  .text-shadow-navy {
-    text-shadow: 2px 2px 0 #000756;
+  .text-shadow-dark {
+    text-shadow: 2px 2px 0 #3d0c08;
   }
   .text-shadow-black {
     text-shadow: 2px 2px 0 #000;
   }
-  .text-shadow-blue {
-    text-shadow: 2px 2px 0 #0015ff;
+  .text-shadow-brand {
+    text-shadow: 2px 2px 0 #ef3124;
   }
 }

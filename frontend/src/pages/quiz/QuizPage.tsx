@@ -22,7 +22,6 @@ const HOURS_OPTIONS = [0.5, 1, 2, 3];
 const GOAL_MIN_LENGTH = 5;
 const GOAL_MAX_LENGTH = 500;
 
-// Вариант ответа: белая карточка с чёрной рамкой, выбранный — синий с тёмной кромкой снизу.
 const optionClass = (active: boolean) =>
   cn(
     "rounded-[4px] border-2 border-black px-5 py-4 text-left font-display text-lg font-medium transition-colors",
@@ -70,21 +69,19 @@ export function QuizPage() {
     setAnswers((prev) => prev.map((v, i) => (i === step ? index : v)));
 
   const submit = async () => {
+    // быстрый старт: квиз не проходили, плана нет — сохраняем цель и настройки и идём в чат
+    if (quick) {
+      if (userId) {
+        useGoalStore.getState().set(userId, goal.trim());
+        savePlanSettings(userId, { days, hoursPerDay });
+      }
+      navigate(ROUTES.CHAT, { replace: true });
+      return;
+    }
+
     setSubmitting(true);
     setError(undefined);
     try {
-      // быстрый старт: квиз не проходили — просим бэкенд собрать план по цели, дням и часам
-      // (план сохраняется на сервере, правая панель чата подхватит его через /quiz/latest)
-      if (quick) {
-        await quizApi.quickstart({ days, hoursPerDay, goal: goal.trim() });
-        if (userId) {
-          useGoalStore.getState().set(userId, goal.trim());
-          savePlanSettings(userId, { days, hoursPerDay });
-        }
-        navigate(ROUTES.CHAT, { replace: true });
-        return;
-      }
-
       const data = await quizApi.submit({
         days,
         hoursPerDay,
@@ -238,9 +235,7 @@ export function QuizPage() {
         <div className="mt-10 flex items-center justify-between gap-4">
           <Button
             variant="secondary"
-            onClick={() =>
-              step > flowStart ? setStep((s) => s - 1) : navigate(ROUTES.START)
-            }
+            onClick={() => (step > flowStart ? setStep((s) => s - 1) : navigate(ROUTES.START))}
             disabled={submitting || (!quick && step === 0)}
             className="min-w-[110px] font-bold uppercase"
           >

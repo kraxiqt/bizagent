@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Logo } from '@/shared/ui';
 
-// Белая страница, сверху название, ниже синяя карточка с чёрной кромкой (вход / регистрация).
 export function AuthLayout() {
   return (
     <main className="flex min-h-full flex-col items-center bg-white px-4 py-10">
