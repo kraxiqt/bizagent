@@ -26,7 +26,7 @@ export function UserAvatar({ name, email, size = 'md', className }: UserAvatarPr
     <span
       aria-hidden="true"
       className={cn(
-        'inline-flex shrink-0 items-center justify-center rounded-full bg-brand-600 font-display font-medium text-white',
+        'inline-flex shrink-0 items-center justify-center rounded-full bg-pop-blue font-display font-medium text-white',
         sizes[size],
         className,
       )}
