@@ -4,18 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="feat(): мелкие правки">
+    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="fix(): убрана лишняя js заглушка">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/favicon.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/layouts/AuthLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layouts/AuthLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/chat/PlanPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/chat/PlanPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/QuizPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/QuizPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/entities/user/ui/UserAvatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/entities/user/ui/UserAvatar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/EmptyState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/EmptyState.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/quiz/api/quizApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/quiz/api/quizApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/InterestList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/InterestList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/interests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/interests.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/quizData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/quizData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/start/StartChoicePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/start/StartChoicePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/shared/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Toast.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Toast.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,61 +57,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0109670845383771" />
-      <entry key="MS500" value="2.100269570155029" />
-      <entry key="S2" value="4.872197011429389" />
-      <entry key="S5" value="8.08299419420133" />
-      <entry key="S10" value="12.496936308035348" />
-      <entry key="S30" value="20.643589621718746" />
-      <entry key="S60" value="25.244638248148316" />
-      <entry key="M2" value="30.737065902629574" />
-      <entry key="M5" value="41.839205934927726" />
-      <entry key="M10" value="61.9942127519121" />
-      <entry key="M15" value="81.62529056243831" />
-      <entry key="M30" value="122.83188922103068" />
-      <entry key="H1" value="160.67669505430763" />
-      <entry key="H2" value="187.2005561652879" />
-      <entry key="H4" value="203.05642798586194" />
-      <entry key="D1" value="217.85115636119372" />
-      <entry key="W1" value="220.5461023497844" />
+      <entry key="MS100" value="1.0000000000314098" />
+      <entry key="MS500" value="1.008016155633011" />
+      <entry key="S2" value="1.3940602503381543" />
+      <entry key="S5" value="2.0075548502062883" />
+      <entry key="S10" value="2.410517033377622" />
+      <entry key="S30" value="2.7776911069056363" />
+      <entry key="S60" value="2.885301093416241" />
+      <entry key="M2" value="2.964468944403536" />
+      <entry key="M5" value="5.105802034835961" />
+      <entry key="M10" value="18.489783381304424" />
+      <entry key="M15" value="37.16022480153258" />
+      <entry key="M30" value="88.70517702520482" />
+      <entry key="H1" value="148.35155314435275" />
+      <entry key="H2" value="196.287587417676" />
+      <entry key="H4" value="227.16331380503374" />
+      <entry key="D1" value="257.39386198308046" />
+      <entry key="W1" value="263.04407220268564" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="4.533074879772872E-21" />
-      <entry key="MS500" value="8.536475114370494E-5" />
-      <entry key="S2" value="0.09612130195439181" />
-      <entry key="S5" value="0.39185722430664915" />
-      <entry key="S10" value="0.6259851905503907" />
-      <entry key="S30" value="0.8642560715903003" />
-      <entry key="S60" value="1.0571927665058964" />
-      <entry key="M2" value="1.4755999288517399" />
-      <entry key="M5" value="2.158664666541478" />
-      <entry key="M10" value="2.8075356899212522" />
-      <entry key="M15" value="3.6250198512331355" />
-      <entry key="M30" value="6.329797158397023" />
-      <entry key="H1" value="9.8433240263638" />
-      <entry key="H2" value="12.782673271639123" />
-      <entry key="H4" value="14.700261143971709" />
-      <entry key="D1" value="16.58699419168058" />
-      <entry key="W1" value="16.94022594278972" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.4094909391555591E-234" />
+      <entry key="S5" value="2.8815418536935313E-94" />
+      <entry key="S10" value="1.698102577768561E-47" />
+      <entry key="S30" value="3.006462084744681E-16" />
+      <entry key="S60" value="2.95093744678511E-8" />
+      <entry key="M2" value="3.8240981996017523E-4" />
+      <entry key="M5" value="0.1307789097625678" />
+      <entry key="M10" value="0.9862687084079159" />
+      <entry key="M15" value="2.097136099646045" />
+      <entry key="M30" value="5.401401903554698" />
+      <entry key="H1" value="10.00012948680947" />
+      <entry key="H2" value="14.26038649128872" />
+      <entry key="H4" value="17.23676419392461" />
+      <entry key="D1" value="20.309100452278788" />
+      <entry key="W1" value="20.899605975904652" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.09467189840796585" />
-      <entry key="MS500" value="1.697234142776879" />
-      <entry key="S2" value="4.790851097665988" />
-      <entry key="S5" value="8.317761282309448" />
-      <entry key="S10" value="13.005381139012016" />
-      <entry key="S30" value="21.453518475968266" />
-      <entry key="S60" value="26.265172314244946" />
-      <entry key="M2" value="32.18251902131905" />
-      <entry key="M5" value="43.97762594721484" />
-      <entry key="M10" value="64.78815497898698" />
-      <entry key="M15" value="85.23927051359932" />
-      <entry key="M30" value="129.15363233439868" />
-      <entry key="H1" value="170.5145266476573" />
-      <entry key="H2" value="199.9798948351661" />
-      <entry key="H4" value="217.75483306874852" />
-      <entry key="D1" value="234.43781053517276" />
-      <entry key="W1" value="237.4862789018378" />
+      <entry key="MS100" value="0.6551967019462487" />
+      <entry key="MS500" value="0.9259913557201235" />
+      <entry key="S2" value="1.3554236644453617" />
+      <entry key="S5" value="1.9769271937121011" />
+      <entry key="S10" value="2.3896309615992375" />
+      <entry key="S30" value="2.7689533736336207" />
+      <entry key="S60" value="2.880666077892963" />
+      <entry key="M2" value="2.9624314550070503" />
+      <entry key="M5" value="5.234284934961644" />
+      <entry key="M10" value="19.471155792617257" />
+      <entry key="M15" value="39.25106731716278" />
+      <entry key="M30" value="94.09953310181945" />
+      <entry key="H1" value="158.34582352897962" />
+      <entry key="H2" value="210.54404542025452" />
+      <entry key="H4" value="244.397777750643" />
+      <entry key="D1" value="277.70252251414774" />
+      <entry key="W1" value="283.9436137970267" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -344,7 +349,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794402132776</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="fix(): убрана лишняя js заглушка">
+      <option name="closed" value="true" />
+      <created>1794485095709</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1794485095709</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,6 +410,7 @@
     <MESSAGE value="feat(src): привязка страницы-выбора" />
     <MESSAGE value="feat(src): замена текста на главной старанице" />
     <MESSAGE value="feat(): убраны старые файлы" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(): убраны старые файлы" />
+    <MESSAGE value="fix(): убрана лишняя js заглушка" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(): убрана лишняя js заглушка" />
   </component>
 </project>
