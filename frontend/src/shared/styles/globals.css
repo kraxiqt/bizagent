@@ -17,6 +17,11 @@
 }
 
 @layer base {
+  ::selection {
+    background: #ffc4be;
+    color: #3d0c08;
+  }
+
   html,
   body,
   #root {
@@ -106,5 +111,9 @@
   }
   .text-shadow-brand {
     text-shadow: 2px 2px 0 #ef3124;
+  }
+  /* Двойная надпись: чёткая тень без размытия, в один цвет со шрифтом */
+  .text-shadow-crisp {
+    text-shadow: 3px 3px 0 #000;
   }
 }

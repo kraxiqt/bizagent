@@ -37,14 +37,20 @@ export function ChatHeader({ title, disabled = false, onNewConversation, onToggl
   const { user } = useAuth();
 
   return (
-    <div className="flex shrink-0 items-center border-b-2 border-black px-4 py-3 dark:border-ink-700 sm:px-6">
+    <div className="flex shrink-0 items-center border-b-4 border-brand-950 bg-brand-600 px-4 py-2 text-white dark:border-brand-950 sm:px-6">
       <div className="flex w-full items-center justify-between gap-3">
         <div className="flex min-w-0 items-center gap-3">
           {onToggleSidebar && (
-            <IconButton size="sm" label="История чатов" icon={MenuIcon} onClick={onToggleSidebar} />
+            <IconButton
+              size="sm"
+              label="История чатов"
+              icon={MenuIcon}
+              onClick={onToggleSidebar}
+              className="text-white hover:bg-brand-700 dark:text-white dark:hover:bg-brand-700"
+            />
           )}
           <Logo size="sm" align="left" className="shrink-0" />
-          <span className="hidden truncate text-sm text-ink-400 dark:text-ink-500 sm:inline">{title}</span>
+          <span className="hidden truncate text-sm text-white/80 sm:inline">{title}</span>
         </div>
 
         <div className="flex shrink-0 items-center gap-2">
@@ -63,13 +69,14 @@ export function ChatHeader({ title, disabled = false, onNewConversation, onToggl
             label={resolvedTheme === 'dark' ? 'Светлая тема' : 'Тёмная тема'}
             icon={resolvedTheme === 'dark' ? SunIcon : MoonIcon}
             onClick={toggleTheme}
+            className="text-white hover:bg-brand-700 dark:text-white dark:hover:bg-brand-700"
           />
           {user && (
             <span className="hidden sm:inline-flex">
               <UserAvatar name={user.name} email={user.email} size="sm" />
             </span>
           )}
-          <LogoutButton />
+          <LogoutButton className="text-white hover:bg-brand-700 dark:text-white dark:hover:bg-brand-700" />
         </div>
       </div>
     </div>

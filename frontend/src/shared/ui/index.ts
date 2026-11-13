@@ -8,6 +8,7 @@ export { Textarea } from './Textarea';
 export type { TextareaProps } from './Textarea';
 export { Spinner } from './Spinner';
 export { Logo } from './Logo';
+export { AlfaMark, EdgeTiles, MondrianMosaic } from './Mondrian';
 export { ResizeHandle } from './ResizeHandle';
 export { Toast } from './Toast';
 export type { ToastData, ToastVariant } from './Toast';

@@ -1,6 +1,6 @@
 import type { InterestScore } from "./interests";
 
-//Направления из каталога Альфа-Курса, которые пользователь выбирал чаще всего
+// Направления из каталога «Альфа-Курса», которые пользователь выбирал чаще всего.
 export function InterestList({ interests }: { interests: InterestScore[] }) {
   if (interests.length === 0) return null;
 

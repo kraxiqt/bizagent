@@ -2,14 +2,12 @@
 // (предпринимательство, менеджмент, маркетинг, финансы и др.). Один вариант ответа на каждый вопрос.
 //
 // ВАЖНО для бэкенда: идентификаторы q1…q10 и по 4 варианта в каждом вопросе. Порядок вариантов не менять:
-// в `interests[i]` указано, какие направления выбирает вариант с номером i (см. interests.ts и QUIZ_INTERESTS.md).
 import type { InterestId } from "./interests";
 
 export interface QuizQuestion {
   id: string;
   text: string;
   options: string[];
-  // interests[i] направления для options[i]; повтор тега усиливает вес
   interests: InterestId[][];
 }
 

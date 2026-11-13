@@ -1,4 +1,7 @@
-//Направления обучения. Названия и состав взяты из каталога платформы Альфа курсы
+// Направления обучения. Названия и состав взяты из каталога платформы «Альфа-Курс» (kurs.alfabank.ru/courses):
+// Законы, Финансы, Маркетинг, Технологии, Первые шаги, Управление командой, Маркетплейсы, Продажи, Коммуникации,
+// HoReCa, Бизнес за рубежом, Франчайзинг, Регистрация бизнеса, Ретейл, Стиль жизни, Услуги, Лидерство.
+// Квиз определяет, какие из них интересны пользователю, чтобы подбирать курсы на этой платформе.
 
 export type InterestId =
   | "start"
@@ -19,7 +22,7 @@ export type InterestId =
   | "abroad"
   | "lifestyle";
 
-//Крупные группы: предпринимательство, менеджмент и тд
+// Крупные группы: «предпринимательство», «менеджмент» и т. д.
 export type InterestGroup =
   | "entrepreneurship"
   | "management"
@@ -30,7 +33,7 @@ export type InterestGroup =
 
 export interface InterestCategory {
   id: InterestId;
-  //название как в каталоге Альфа-Курса
+  // название как в каталоге Альфа-Курса
   label: string;
   group: InterestGroup;
 }
@@ -44,7 +47,7 @@ export const INTEREST_GROUP_LABELS: Record<InterestGroup, string> = {
   personal: "Личная эффективность",
 };
 
-//Порядок важен: при равном счёте выше стоит направление, которое идёт раньше в этом списке.
+// Порядок важен: при равном счёте выше стоит направление, которое идёт раньше в этом списке.
 export const INTEREST_CATEGORIES: InterestCategory[] = [
   { id: "start", label: "Первые шаги", group: "entrepreneurship" },
   { id: "registration", label: "Регистрация бизнеса", group: "entrepreneurship" },
@@ -69,7 +72,7 @@ export interface InterestScore extends InterestCategory {
   score: number;
 }
 
-//Считает, какие направления выбраны чаще всего. Каждый тег в выбранном варианте даёт +1 к направлению
+// Считает, какие направления выбраны чаще всего. Каждый тег в выбранном варианте даёт +1 к направлению
 export function getInterestProfile(
   questions: { interests: InterestId[][] }[],
   answers: (number | null)[],

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '@/app/router/routes';
 import { cn } from '@/shared/lib/cn';
-import { Logo } from '@/shared/ui';
+import { EdgeTiles, Logo } from '@/shared/ui';
 
 interface ChoiceOption {
   id: string;
@@ -38,13 +38,14 @@ function ChoiceCard({ option, onSelect }: { option: ChoiceOption; onSelect: () =
       type="button"
       onClick={onSelect}
       className={cn(
-        'group flex flex-col border-2 border-black bg-white text-left shadow-hard',
+        'group relative flex flex-col border-4 border-stone-900 bg-white text-left shadow-[8px_8px_0_0_#1c1917]',
+        "after:absolute after:-right-2 after:-top-2 after:h-0 after:w-0 after:bg-pop-yellow after:transition-all after:duration-500 after:content-[''] hover:after:h-16 hover:after:w-16",
         'transition-all duration-300 ease-out',
-        'hover:-translate-y-2 hover:bg-brand-50 hover:shadow-[0_14px_0_0_#000]',
+        'hover:-translate-y-2 hover:shadow-[12px_14px_0_0_#1c1917]',
         'active:translate-y-1 active:shadow-hard-sm',
       )}
     >
-      <div className="relative aspect-[4/3] overflow-hidden border-b-2 border-black bg-brand-50">
+      <div className="relative aspect-[4/3] overflow-hidden border-b-2 border-black bg-stone-100">
         {imageFailed ? (
           <div aria-hidden="true" className="h-full w-full bg-[#d9d9d9]" />
         ) : (
@@ -52,7 +53,7 @@ function ChoiceCard({ option, onSelect }: { option: ChoiceOption; onSelect: () =
             src={option.image}
             alt=""
             onError={() => setImageFailed(true)}
-            className="h-full w-full object-contain p-4 transition-transform duration-500 ease-out group-hover:-rotate-3 group-hover:scale-110"
+            className="h-full w-full object-contain p-4"
           />
         )}
       </div>
@@ -62,7 +63,7 @@ function ChoiceCard({ option, onSelect }: { option: ChoiceOption; onSelect: () =
           {option.title}
         </h2>
         <p className="font-sans text-base font-light leading-snug text-ink-700">{option.text}</p>
-        <span className="mt-auto flex items-center gap-2 pt-3 font-display text-xl text-brand-600">
+        <span className="mt-auto flex items-center gap-2 pt-3 font-display text-xl text-brand-600 dark:text-brand-400">
           Начать
           <svg
             aria-hidden="true"
@@ -87,14 +88,15 @@ export function StartChoicePage() {
   const navigate = useNavigate();
 
   return (
-    <main className="flex min-h-full flex-col items-center bg-white px-6 py-10 text-black sm:px-10">
-      <div className="mb-10 flex justify-center">
+    <main className="relative flex min-h-full flex-col items-center overflow-hidden bg-white px-6 py-10 text-black sm:px-10 dark:bg-ink-950 dark:text-ink-100">
+      <EdgeTiles />
+      <div className="relative mb-10 flex justify-center">
         <Logo size="lg" />
       </div>
-      <h1 className="mb-10 text-center font-display text-4xl font-medium sm:text-5xl">
-        Как начнём?
+      <h1 className="relative mb-10 text-center font-display text-4xl font-medium sm:text-5xl">
+        <span className="text-brand-600">Как начнём?</span>
       </h1>
-      <div className="grid w-full max-w-3xl gap-8 sm:grid-cols-2">
+      <div className="relative grid w-full max-w-3xl gap-8 sm:grid-cols-2">
         {OPTIONS.map((option) => (
           <ChoiceCard key={option.id} option={option} onSelect={() => navigate(option.to)} />
         ))}

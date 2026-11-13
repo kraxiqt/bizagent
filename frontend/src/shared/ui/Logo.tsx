@@ -29,7 +29,7 @@ export function Logo({ size = 'lg', align = 'center', className }: LogoProps) {
   return (
     <span
       className={cn(
-        'inline-block font-display font-bold leading-tight text-[#ef3124]',
+        'inline-block bg-brand-600 px-3 py-1 font-display font-bold leading-tight text-white',
         second ? sizes[size] : cn(singleWordSizes[size], 'tracking-tight'),
         align === 'center' ? 'text-center' : 'text-left',
         className,
