@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react';
+import type { ReactNode } from 'react';
 import { cn } from '@/shared/lib/cn';
 
 // Тон клетки: w — белый, y — жёлтый, b — синий, r — красный бренд, k — чёрный
@@ -64,13 +64,24 @@ const YELLOW = '#fcd404';
 const BLUE = '#0c7cbf';
 
 // Геометрический фон входа и выбора пути: по краям разбросаны квадраты, прямоугольники и контурные треугольники.
-// Система координат 1976 × 960 (как на макете), на узком экране не показывается.
+// Фигуры плавно плавают вверх-вниз (каждая со своей задержкой). Система координат 1976 × 960, на узком экране не показывается.
 export function GeoDecor({ className }: { className?: string }) {
-  const enter = (i: number): CSSProperties => ({
-    transformBox: 'fill-box',
-    transformOrigin: 'center',
-    animationDelay: `${i * 80}ms`,
-  });
+  // плавание вверх-вниз, как у прежних частиц: чётные и нечётные фигуры идут в разные стороны
+  const shape = (i: number, el: ReactNode) => (
+    <g
+      key={i}
+      className={i % 2 ? 'animate-float' : 'animate-float-slow'}
+      style={{ animationDelay: `${i * 350}ms` }}
+    >
+      <g
+        className="animate-tile-in"
+        style={{ transformBox: 'fill-box', transformOrigin: 'center', animationDelay: `${i * 80}ms` }}
+      >
+        {el}
+      </g>
+    </g>
+  );
+
   return (
     <svg
       aria-hidden="true"
@@ -79,26 +90,26 @@ export function GeoDecor({ className }: { className?: string }) {
       className={cn('pointer-events-none absolute inset-0 hidden h-full w-full md:block', className)}
     >
       {/* верх слева: красная полоса и белый квадрат с чёрной обводкой */}
-      <rect className="animate-tile-in" style={enter(0)} x="-4" y="40" width="322" height="108" fill={RED} />
-      <rect className="animate-tile-in" style={enter(0)} x="318" y="40" width="6" height="108" fill={INK} />
-      <rect className="animate-tile-in" style={enter(1)} x="329" y="39" width="336" height="237" fill="#fff" stroke={INK} strokeWidth="3" />
+      {shape(0, <rect x="-4" y="40" width="322" height="108" fill={RED} />)}
+      {shape(1, <rect x="318" y="40" width="6" height="108" fill={INK} />)}
+      {shape(2, <rect x="329" y="39" width="336" height="237" fill="#fff" stroke={INK} strokeWidth="3" />)}
 
       {/* слева: жёлтый квадрат, красный треугольник, синий прямоугольник внизу */}
-      <rect className="animate-tile-in" style={enter(2)} x="-2" y="362" width="42" height="62" fill={YELLOW} stroke={INK} strokeWidth="3" />
-      <polygon className="animate-tile-in" style={enter(3)} points="344,496 281,537 344,577" fill="none" stroke={RED} strokeWidth="6" strokeLinejoin="miter" />
-      <rect className="animate-tile-in" style={enter(4)} x="-2" y="721" width="290" height="150" fill={BLUE} stroke={INK} strokeWidth="3" />
+      {shape(3, <rect x="-2" y="362" width="42" height="62" fill={YELLOW} stroke={INK} strokeWidth="3" />)}
+      {shape(4, <polygon points="344,496 281,537 344,577" fill="none" stroke={RED} strokeWidth="6" strokeLinejoin="miter" />)}
+      {shape(5, <rect x="-2" y="721" width="290" height="150" fill={BLUE} stroke={INK} strokeWidth="3" />)}
 
       {/* справа: треугольники, чёрный квадрат, синяя полоса и красная рамка внизу */}
-      <polygon className="animate-tile-in" style={enter(5)} points="1461,95 1546,95 1546,162" fill="none" stroke={RED} strokeWidth="6" strokeLinejoin="miter" />
-      <rect className="animate-tile-in" style={enter(6)} x="1819" y="122" width="74" height="79" fill={INK} />
-      <polygon className="animate-tile-in" style={enter(7)} points="1325,307 1325,377 1396,377" fill="none" stroke={RED} strokeWidth="6" strokeLinejoin="miter" />
-      <rect className="animate-tile-in" style={enter(8)} x="1698" y="509" width="195" height="90" fill={BLUE} stroke={INK} strokeWidth="3" />
-      <rect className="animate-tile-in" style={enter(9)} x="1199" y="562" width="262" height="278" fill="#fff" stroke={INK} strokeWidth="3" />
-      <rect className="animate-tile-in" style={enter(10)} x="1698" y="748" width="195" height="174" fill={INK} />
-      <rect className="animate-tile-in" style={enter(11)} x="1716" y="762" width="177" height="146" fill={RED} />
+      {shape(6, <polygon points="1461,95 1546,95 1546,162" fill="none" stroke={RED} strokeWidth="6" strokeLinejoin="miter" />)}
+      {shape(7, <rect x="1819" y="122" width="74" height="79" fill={INK} />)}
+      {shape(8, <polygon points="1325,307 1325,377 1396,377" fill="none" stroke={RED} strokeWidth="6" strokeLinejoin="miter" />)}
+      {shape(9, <rect x="1698" y="509" width="195" height="90" fill={BLUE} stroke={INK} strokeWidth="3" />)}
+      {shape(10, <rect x="1199" y="562" width="262" height="278" fill="#fff" stroke={INK} strokeWidth="3" />)}
+      {shape(11, <rect x="1698" y="748" width="195" height="174" fill={INK} />)}
+      {shape(12, <rect x="1716" y="762" width="177" height="146" fill={RED} />)}
 
       {/* низ по центру: красный треугольник вверх */}
-      <polygon className="animate-tile-in" style={enter(12)} points="636,930 680,891 723,930" fill="none" stroke={RED} strokeWidth="6" strokeLinejoin="miter" />
+      {shape(13, <polygon points="636,930 680,891 723,930" fill="none" stroke={RED} strokeWidth="6" strokeLinejoin="miter" />)}
     </svg>
   );
 }

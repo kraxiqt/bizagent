@@ -1,8 +1,0 @@
-.env
-.__pycache__/
-.idea/
-*.pyc
-.vscode/
-*.log
-temp*
-.venv
