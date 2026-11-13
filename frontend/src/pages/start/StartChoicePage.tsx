@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '@/app/router/routes';
 import { cn } from '@/shared/lib/cn';
-import { EdgeTiles, Logo } from '@/shared/ui';
+import { GeoDecor, Logo } from '@/shared/ui';
 
 interface ChoiceOption {
   id: string;
@@ -89,7 +89,7 @@ export function StartChoicePage() {
 
   return (
     <main className="relative flex min-h-full flex-col items-center overflow-hidden bg-white px-6 py-10 text-black sm:px-10 dark:bg-ink-950 dark:text-ink-100">
-      <EdgeTiles />
+      <GeoDecor />
       <div className="relative mb-10 flex justify-center">
         <Logo size="lg" />
       </div>

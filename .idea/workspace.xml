@@ -6,22 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="fix(): убрана лишняя js заглушка">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/favicon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/layouts/AuthLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layouts/AuthLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/entities/user/ui/UserAvatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/entities/user/ui/UserAvatar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/ChatHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/chat/ui/EmptyState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/chat/ui/EmptyState.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/features/quiz/api/quizApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/features/quiz/api/quizApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/InterestList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/InterestList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/interests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/interests.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/quiz/quizData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/quiz/quizData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/start/StartChoicePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/start/StartChoicePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/shared/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/Logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/shared/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/ui/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,25 +110,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ann-legkaya/PycharmProjects/bizagent/frontend/src/pages/quiz&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/ann-legkaya/PycharmProjects/bizagent/frontend/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/ann-legkaya/PycharmProjects/bizagent/frontend/src/pages/quiz",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "ts.external.directory.path": "/home/ann-legkaya/PycharmProjects/bizagent/frontend/node_modules/typescript/lib"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/pages/quiz" />

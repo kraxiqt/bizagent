@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom';
-import { EdgeTiles, Logo } from '@/shared/ui';
+import { GeoDecor, Logo } from '@/shared/ui';
 
 // Белая страница, несколько квадратов по бокам, сверху название, ниже красная карточка (вход / регистрация).
 export function AuthLayout() {
   return (
     <main className="relative flex min-h-full flex-col items-center overflow-hidden bg-white px-4 py-10 dark:bg-ink-950">
-      <EdgeTiles />
+      <GeoDecor />
       <div className="relative w-full max-w-md">
         <h1 className="mb-10 flex justify-center">
           <Logo size="lg" />
