@@ -18,14 +18,14 @@ const OPTIONS: ChoiceOption[] = [
     id: 'quick',
     title: 'Быстрый старт',
     text: 'Укажите время и цель — и сразу перейдёте в чат с наставником.',
-    image: '/assets/lander-s5.jpeg',
+    image: '/assets/start_quick_ab.svg',
     to: `${ROUTES.QUIZ}?mode=quick`,
   },
   {
     id: 'quiz',
     title: 'Квиз',
     text: 'Ответьте на несколько вопросов — мы определим ваши интересы и составим план обучения.',
-    image: '/assets/lander-s4.jpeg',
+    image: '/assets/start_quiz_ab.svg',
     to: ROUTES.QUIZ,
   },
 ];
