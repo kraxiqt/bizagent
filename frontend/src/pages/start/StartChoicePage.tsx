@@ -63,7 +63,7 @@ function ChoiceCard({ option, onSelect }: { option: ChoiceOption; onSelect: () =
           {option.title}
         </h2>
         <p className="font-sans text-base font-light leading-snug text-ink-700">{option.text}</p>
-        <span className="mt-auto flex items-center gap-2 pt-3 font-display text-xl text-brand-600 dark:text-brand-400">
+        <span className="mt-auto flex items-center gap-2 pt-3 font-display text-xl text-brand-600">
           Начать
           <svg
             aria-hidden="true"
@@ -88,7 +88,7 @@ export function StartChoicePage() {
   const navigate = useNavigate();
 
   return (
-    <main className="relative flex min-h-full flex-col items-center overflow-hidden bg-white px-6 py-10 text-black sm:px-10 dark:bg-ink-950 dark:text-ink-100">
+    <main className="relative flex min-h-full flex-col items-center overflow-hidden bg-white px-6 py-10 text-black sm:px-10 [color-scheme:light]">
       <GeoDecor />
       <div className="relative mb-10 flex justify-center">
         <Logo size="lg" />

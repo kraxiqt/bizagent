@@ -40,7 +40,7 @@ export function WelcomePage() {
   const start = () => navigate(ROUTES.REGISTER);
 
   return (
-    <div className="flex min-h-full flex-col bg-white text-black dark:bg-ink-950 dark:text-ink-100">
+    <div className="flex min-h-full flex-col bg-white text-black [color-scheme:light]">
       <header className="border-b-4 border-brand-950 bg-brand-600 px-6 py-2">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between">
           <Logo size="sm" align="left" />
