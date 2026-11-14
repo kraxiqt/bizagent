@@ -1,5 +1,6 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import { useTheme } from '@/app/providers';
 import { useAuthStore } from '@/features/auth';
 import {
   ChatHeader,
@@ -19,6 +20,18 @@ const isDesktop = () => window.matchMedia('(min-width: 768px)').matches;
 
 //Хедер чата + боковая панель с историей
 export function ChatLayout() {
+  const { resolvedTheme } = useTheme();
+  useEffect(() => {
+    const root = document.documentElement;
+    const dark = resolvedTheme === 'dark';
+    root.classList.toggle('dark', dark);
+    root.style.colorScheme = dark ? 'dark' : 'light';
+    return () => {
+      root.classList.remove('dark');
+      root.style.colorScheme = '';
+    };
+  }, [resolvedTheme]);
+
   const {
     conversation,
     messages,

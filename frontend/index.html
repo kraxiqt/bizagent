@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="light" />
     <meta name="theme-color" content="#ef3124" />
     <title>Verity</title>
     <script>
@@ -16,7 +16,8 @@
           var dark =
             theme === 'dark' ||
             (theme !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-          if (dark) document.documentElement.classList.add('dark');
+          var onChat = window.location.pathname.indexOf('/chat') === 0;
+          if (dark && onChat) document.documentElement.classList.add('dark');
         } catch (e) {}
       })();
     </script>

@@ -30,10 +30,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     return () => media.removeEventListener('change', onChange);
   }, []);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', resolvedTheme === 'dark');
-  }, [resolvedTheme]);
-
   const setTheme = useCallback((next: Theme) => {
     setThemeState(next);
     storage.set(STORAGE_KEYS.THEME, next);

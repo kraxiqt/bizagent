@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="fix(): добавлен ридми">
+    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="fix(): исправление проблемы с темой в разных браузерах">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/layouts/AuthLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layouts/AuthLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/start/StartChoicePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/start/StartChoicePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/welcome/WelcomePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,61 +41,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0020623125666144" />
-      <entry key="MS500" value="1.707882895282825" />
-      <entry key="S2" value="4.770225384773337" />
-      <entry key="S5" value="9.169925715008366" />
-      <entry key="S10" value="13.57825635471654" />
-      <entry key="S30" value="18.987625322862094" />
-      <entry key="S60" value="20.855266528890592" />
-      <entry key="M2" value="21.91127032492981" />
-      <entry key="M5" value="24.610761677594596" />
-      <entry key="M10" value="38.03377968118536" />
-      <entry key="M15" value="56.662627843771325" />
-      <entry key="M30" value="108.18883540196418" />
-      <entry key="H1" value="167.93841272863565" />
-      <entry key="H2" value="216.0187039483862" />
-      <entry key="H4" value="247.00879690182077" />
-      <entry key="D1" value="277.3648324773123" />
-      <entry key="W1" value="283.0398376304769" />
+      <entry key="MS100" value="1.002213992051923" />
+      <entry key="MS500" value="1.5386184363381872" />
+      <entry key="S2" value="4.42262153105357" />
+      <entry key="S5" value="7.679002565784113" />
+      <entry key="S10" value="10.03405980330411" />
+      <entry key="S30" value="12.424971704313226" />
+      <entry key="S60" value="13.177248251032104" />
+      <entry key="M2" value="13.83155029514028" />
+      <entry key="M5" value="17.96907359992903" />
+      <entry key="M10" value="29.514479184736086" />
+      <entry key="M15" value="45.22337981167855" />
+      <entry key="M30" value="94.35600635875916" />
+      <entry key="H1" value="158.74468257961902" />
+      <entry key="H2" value="214.5504593918165" />
+      <entry key="H4" value="252.00155881310314" />
+      <entry key="D1" value="289.6530329909389" />
+      <entry key="W1" value="296.7896310371134" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="4.767183432189498E-12" />
-      <entry key="MS500" value="0.005440669846363416" />
-      <entry key="S2" value="0.2715895735452902" />
-      <entry key="S5" value="0.5936975233786791" />
-      <entry key="S10" value="0.7705176982903633" />
-      <entry key="S30" value="0.9167710126041446" />
-      <entry key="S60" value="0.9574816243473159" />
-      <entry key="M2" value="0.9788636446935778" />
-      <entry key="M5" value="1.1181155362702437" />
-      <entry key="M10" value="1.9666899887973353" />
-      <entry key="M15" value="3.07257947994596" />
-      <entry key="M30" value="6.371982948430566" />
-      <entry key="H1" value="10.973478647326461" />
-      <entry key="H2" value="15.241526305214824" />
-      <entry key="H4" value="18.22540001933746" />
-      <entry key="D1" value="21.30687360676753" />
-      <entry key="W1" value="21.899278715767093" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="2.1207684336252173E-117" />
+      <entry key="S5" value="2.1409045256703163E-47" />
+      <entry key="S10" value="4.626990950575028E-24" />
+      <entry key="S30" value="1.6663499650039615E-8" />
+      <entry key="S60" value="1.290871818927824E-4" />
+      <entry key="M2" value="0.011365761405599596" />
+      <entry key="M5" value="0.1881209730441257" />
+      <entry key="M10" value="0.8066983604143804" />
+      <entry key="M15" value="1.696237410254743" />
+      <entry key="M30" value="4.7344154021489855" />
+      <entry key="H1" value="9.45889056212005" />
+      <entry key="H2" value="14.150650311914998" />
+      <entry key="H4" value="17.56107261275885" />
+      <entry key="D1" value="21.175421211849127" />
+      <entry key="W1" value="21.87992645423262" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.04319895525620754" />
-      <entry key="MS500" value="1.224460278817544" />
-      <entry key="S2" value="4.718576684646331" />
-      <entry key="S5" value="9.495610361760807" />
-      <entry key="S10" value="14.159821743118533" />
-      <entry key="S30" value="19.821559682975558" />
-      <entry key="S60" value="21.768073207198412" />
-      <entry key="M2" value="22.866876833088796" />
-      <entry key="M5" value="25.718079057963223" />
-      <entry key="M10" value="39.991334746545824" />
-      <entry key="M15" value="59.72609629142601" />
-      <entry key="M30" value="114.5523646386109" />
-      <entry key="H1" value="178.90532449134957" />
-      <entry key="H2" value="231.25594517731992" />
-      <entry key="H4" value="265.2317172742233" />
-      <entry key="D1" value="298.6712360551043" />
-      <entry key="W1" value="304.9390476576009" />
+      <entry key="MS100" value="0.9481375437242562" />
+      <entry key="MS500" value="1.5209349790239965" />
+      <entry key="S2" value="4.407603150773746" />
+      <entry key="S5" value="7.664094957289703" />
+      <entry key="S10" value="10.022311292366624" />
+      <entry key="S30" value="12.419418848445753" />
+      <entry key="S60" value="13.174324735670638" />
+      <entry key="M2" value="13.841049044385956" />
+      <entry key="M5" value="18.154720483041597" />
+      <entry key="M10" value="30.317098753860257" />
+      <entry key="M15" value="46.9143654949051" />
+      <entry key="M30" value="99.08402929369338" />
+      <entry key="H1" value="168.1978568880904" />
+      <entry key="H2" value="228.69710342550434" />
+      <entry key="H4" value="269.56022821000505" />
+      <entry key="D1" value="310.827984747268" />
+      <entry key="W1" value="318.66948853104356" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -360,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794652499948</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fix(): исправление проблемы с темой в разных браузерах">
+      <option name="closed" value="true" />
+      <created>1794674508951</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1794674508951</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +395,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(core): заглушка для бэкенда" />
     <MESSAGE value="feat(core): картинки и вспомогательные файлы" />
     <MESSAGE value="feat(core): .idea файлы" />
     <MESSAGE value="feat(src/feature): Zustand store, состояния, hooks и их ui" />
@@ -415,6 +419,7 @@
     <MESSAGE value="fix(): убрана лишняя js заглушка" />
     <MESSAGE value="fix(): добавлены картинки на страницу выбора" />
     <MESSAGE value="fix(): добавлен ридми" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(): добавлен ридми" />
+    <MESSAGE value="fix(): исправление проблемы с темой в разных браузерах" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(): исправление проблемы с темой в разных браузерах" />
   </component>
 </project>
