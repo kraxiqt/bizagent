@@ -13,12 +13,24 @@ export interface QuizSubmitDto {
   answers: { questionId: string; optionIndex: number }[];
 }
 
+// «Быстрый старт»: то же самое, но без ответов теста
+export type QuickstartDto = Omit<QuizSubmitDto, "answers">;
+
 export interface QuizDiagnosis {
   totalScore: number;
   maxScore: number;
   level: string;
   weakTopics: string[];
   strongTopics: string[];
+  // "quickstart" для плана, созданного через «Быстрый старт»
+  mode?: string;
+}
+
+export interface QuizArticle {
+  id: string;
+  title: string;
+  url: string;
+  type: "article" | "term" | "course";
 }
 
 export interface QuizPlanDay {
@@ -27,6 +39,9 @@ export interface QuizPlanDay {
   tasks: string[];
   result: string;
   duration_min: number;
+  // есть только у плана «Быстрого старта»
+  theory?: string;
+  articles?: QuizArticle[];
 }
 
 export interface QuizPlan {
@@ -47,5 +62,8 @@ export const quizApi = {
   questions: () => apiClient.get<QuizQuestion[]>("/quiz"),
   submit: (dto: QuizSubmitDto) =>
     apiClient.post<QuizResult>("/quiz/submit", dto, { timeoutMs: 120_000 }),
+  // быстрый старт: план по цели, дням и часам без теста (POST /api/quickstart/plan)
+  quickstart: (dto: QuickstartDto) =>
+    apiClient.post<QuizResult>("/quickstart/plan", dto, { timeoutMs: 120_000 }),
   latest: () => apiClient.get<QuizResult | null>("/quiz/latest"),
 };

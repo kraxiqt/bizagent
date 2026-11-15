@@ -21,9 +21,6 @@ MAX_MESSAGE_CHARS = 4000  # защита лимита токенов на бес
 router = APIRouter(prefix="/api/chat", tags=["chat"])
 
 
-
-
-
 class ChatRequest(BaseModel):
     conversationId: str = Field(min_length=1, max_length=36)
     content: str = Field(min_length=1, max_length=MAX_MESSAGE_CHARS)
@@ -92,6 +89,8 @@ def stream_chat(
         ).all()
         history = [{"role": r.role, "content": r.content} for r in reversed(rows)]
     history.append({"role": "user", "content": data.content})
+
+    # профиль и план пользователя из теста или быстрого старта (None, если их ещё нет)
     ctx = quiz_context_for_chat(db, str(user.id))
 
     # Первый кусок берём до ответа клиенту: так ошибки провайдера (лимит, ключ)

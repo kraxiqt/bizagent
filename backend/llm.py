@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 from collections.abc import Iterator
 from datetime import datetime, timezone
@@ -8,6 +9,8 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 load_dotenv()
+
+logger = logging.getLogger(__name__)
 
 LLM_API_KEY = os.getenv("LLM_API_KEY")
 LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.groq.com/openai/v1")
@@ -100,6 +103,7 @@ def _params(
 
 
 def _to_unavailable(err: Exception) -> LLMUnavailable:
+    logger.warning("Ошибка LLM: %r", err)  # настоящая причина 503 появится в терминале uvicorn
     if isinstance(err, openai.RateLimitError):
         return LLMUnavailable("Слишком много запросов к ИИ, подождите минуту и повторите")
     if isinstance(err, openai.AuthenticationError):
