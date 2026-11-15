@@ -189,7 +189,7 @@ export function PlanPanel({ width }: PlanPanelProps) {
             to={ROUTES.QUIZ}
             className="mt-4 text-center text-xs underline opacity-70"
           >
-            Пройти тест заново
+            {isQuickstart ? "Пройти тест" : "Пройти тест заново"}
           </Link>
         </>
       )}
