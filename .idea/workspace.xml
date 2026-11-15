@@ -4,8 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="fix(): исправление проблемы с темой в разных браузерах">
+    <list default="true" id="3e7a9bd9-860b-4d9b-ae6a-bc0e6d934206" name="Changes" comment="fix(): тема меняется для всех элементов, но только в чате">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/@tanstack_react-query.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/@tanstack_react-query.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-markdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-markdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-markdown.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-markdown.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-router-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-router-dom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/remark-gfm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/remark-gfm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/remark-gfm.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/remark-gfm.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/tailwind-merge.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/tailwind-merge.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/zustand.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/zustand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/zustand.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/zustand.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/chat/PlanPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/chat/PlanPanel.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,61 +59,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.002213992051923" />
-      <entry key="MS500" value="1.5386184363381872" />
-      <entry key="S2" value="4.42262153105357" />
-      <entry key="S5" value="7.679002565784113" />
-      <entry key="S10" value="10.03405980330411" />
-      <entry key="S30" value="12.424971704313226" />
-      <entry key="S60" value="13.177248251032104" />
-      <entry key="M2" value="13.83155029514028" />
-      <entry key="M5" value="17.96907359992903" />
-      <entry key="M10" value="29.514479184736086" />
-      <entry key="M15" value="45.22337981167855" />
-      <entry key="M30" value="94.35600635875916" />
-      <entry key="H1" value="158.74468257961902" />
-      <entry key="H2" value="214.5504593918165" />
-      <entry key="H4" value="252.00155881310314" />
-      <entry key="D1" value="289.6530329909389" />
-      <entry key="W1" value="296.7896310371134" />
+      <entry key="MS100" value="1.0126823854381861" />
+      <entry key="MS500" value="2.104074737880279" />
+      <entry key="S2" value="6.1476552743920365" />
+      <entry key="S5" value="10.573054431250988" />
+      <entry key="S10" value="14.579853246632513" />
+      <entry key="S30" value="19.797856791819452" />
+      <entry key="S60" value="21.716388472860803" />
+      <entry key="M2" value="22.80917302001671" />
+      <entry key="M5" value="23.993873085039503" />
+      <entry key="M10" value="28.595439771312662" />
+      <entry key="M15" value="37.38843219066035" />
+      <entry key="M30" value="75.57264889668012" />
+      <entry key="H1" value="141.41384946136733" />
+      <entry key="H2" value="208.5301722782056" />
+      <entry key="H4" value="257.7100188554877" />
+      <entry key="D1" value="310.03840778735815" />
+      <entry key="W1" value="320.2576903764621" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="2.1207684336252173E-117" />
-      <entry key="S5" value="2.1409045256703163E-47" />
-      <entry key="S10" value="4.626990950575028E-24" />
-      <entry key="S30" value="1.6663499650039615E-8" />
-      <entry key="S60" value="1.290871818927824E-4" />
-      <entry key="M2" value="0.011365761405599596" />
-      <entry key="M5" value="0.1881209730441257" />
-      <entry key="M10" value="0.8066983604143804" />
-      <entry key="M15" value="1.696237410254743" />
-      <entry key="M30" value="4.7344154021489855" />
-      <entry key="H1" value="9.45889056212005" />
-      <entry key="H2" value="14.150650311914998" />
-      <entry key="H4" value="17.56107261275885" />
-      <entry key="D1" value="21.175421211849127" />
-      <entry key="W1" value="21.87992645423262" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="1.366477191256832E-141" />
+      <entry key="S10" value="3.696589226918286E-71" />
+      <entry key="S30" value="3.3311976222113475E-24" />
+      <entry key="S60" value="1.8251569241926125E-12" />
+      <entry key="M2" value="1.3514720867025061E-6" />
+      <entry key="M5" value="0.005064314109351943" />
+      <entry key="M10" value="0.1323588189674036" />
+      <entry key="M15" value="0.5083713999841372" />
+      <entry key="M30" value="2.5918722805175904" />
+      <entry key="H1" value="6.998642648507206" />
+      <entry key="H2" value="12.172035434674513" />
+      <entry key="H4" value="16.28712551367072" />
+      <entry key="D1" value="20.911296438945516" />
+      <entry key="W1" value="21.84072896140214" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9481375437242562" />
-      <entry key="MS500" value="1.5209349790239965" />
-      <entry key="S2" value="4.407603150773746" />
-      <entry key="S5" value="7.664094957289703" />
-      <entry key="S10" value="10.022311292366624" />
-      <entry key="S30" value="12.419418848445753" />
-      <entry key="S60" value="13.174324735670638" />
-      <entry key="M2" value="13.841049044385956" />
-      <entry key="M5" value="18.154720483041597" />
-      <entry key="M10" value="30.317098753860257" />
-      <entry key="M15" value="46.9143654949051" />
-      <entry key="M30" value="99.08402929369338" />
-      <entry key="H1" value="168.1978568880904" />
-      <entry key="H2" value="228.69710342550434" />
-      <entry key="H4" value="269.56022821000505" />
-      <entry key="D1" value="310.827984747268" />
-      <entry key="W1" value="318.66948853104356" />
+      <entry key="MS100" value="0.10427435952086395" />
+      <entry key="MS500" value="1.6863902344183206" />
+      <entry key="S2" value="5.995254176130662" />
+      <entry key="S5" value="10.501906590978448" />
+      <entry key="S10" value="14.541026099988992" />
+      <entry key="S30" value="19.783702156488378" />
+      <entry key="S60" value="21.709101105265155" />
+      <entry key="M2" value="22.805471672061433" />
+      <entry key="M5" value="23.997374780520122" />
+      <entry key="M10" value="28.726378771062127" />
+      <entry key="M15" value="37.894728644261626" />
+      <entry key="M30" value="78.16077081884055" />
+      <entry key="H1" value="148.40813718486476" />
+      <entry key="H2" value="220.69869886261503" />
+      <entry key="H4" value="273.9948841121665" />
+      <entry key="D1" value="330.9492353958192" />
+      <entry key="W1" value="342.0983497538635" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -365,7 +383,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794674508951</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fix(): тема меняется для всех элементов, но только в чате">
+      <option name="closed" value="true" />
+      <created>1794676071565</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1794676071565</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +421,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(core): картинки и вспомогательные файлы" />
     <MESSAGE value="feat(core): .idea файлы" />
     <MESSAGE value="feat(src/feature): Zustand store, состояния, hooks и их ui" />
     <MESSAGE value="feat(src/entities): данные пользователя + ui" />
@@ -420,6 +445,7 @@
     <MESSAGE value="fix(): добавлены картинки на страницу выбора" />
     <MESSAGE value="fix(): добавлен ридми" />
     <MESSAGE value="fix(): исправление проблемы с темой в разных браузерах" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(): исправление проблемы с темой в разных браузерах" />
+    <MESSAGE value="fix(): тема меняется для всех элементов, но только в чате" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(): тема меняется для всех элементов, но только в чате" />
   </component>
 </project>
